@@ -1,1 +1,10 @@
-ок#42445A
+#Oinf {opacity: 0;
+  position: fixed;
+  width: 150px;
+  max-width: 250px;
+  min-width: 50px;
+  min-height: 30px;
+  background: #42445ADB;
+  border: 1px solid red;
+  transition: .3s;
+}
