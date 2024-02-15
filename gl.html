@@ -13,17 +13,24 @@
 <body>
   <div id="id">...</div>
   
-  <div>Верх с: 
-    <button onclick="Oinf.$({s:1})">Лева</button>, 
-    <button onclick="Oinf.$({s:2})">Права</button>
+  <style>
+    button {
+      margin: 5px 0;
+    }
+  </style>
+  <div style="border: 1px solid green; text-align: center">
+    <div>Верх с: 
+      <button onclick="Oinf.$({s:1,t:'<b>zz</b>'})">Лева</button>, 
+      <button onclick="Oinf.$({s:2,t:'<b>zz</b>'})">Права</button>
+    </div>
+    <div>Низ с: 
+      <button onclick="Oinf.$({s:3})">Лева</button>, 
+      <button onclick="Oinf.$({s:4})">Права</button>
+    </div>
+    <button onclick="Oinf.$()">undefined</button>
+    <button onclick="Oinf.X()" style="background: red">Закрыть</button>
   </div>
-  <div>Низ с: 
-    <button onclick="Oinf.$({s:3})">Лева</button>, 
-    <button onclick="Oinf.$({s:4})">Права</button>
-  </div>
-  <button onclick="Oinf.$()">undefined</button>
-  <button onclick="Oinf.X()">Закрыть</button>
-
+  
   <div style="height: 1700px"></div>
 </body>
 </html>
