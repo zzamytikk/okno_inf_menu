@@ -7,3 +7,11 @@
   background: #42445ADB;
   transition: .3s;
 }
+
+#Oinf > div {
+  
+  transition: .3s;
+}
+#Oinf > div:nth-of-type(2n) {
+  background: green;
+}
