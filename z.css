@@ -12,6 +12,19 @@
   
   transition: .3s;
 }
-#Oinf > div:nth-of-type(2n) {
-  background: green;
+
+.OinfL {/* Загрузка */
+  color: #fff;
+}
+.Oinf0 {/* Ошибка */
+  color: red;
+}
+.Oinf1 {/* Хорошо */
+  color: #0b0;
+}
+.Oinf2 {/* Сообшение */
+  color: #ff1;
+}
+.Oinf3 {/* Оповещение */
+  color: orange;
 }
