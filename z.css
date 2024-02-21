@@ -11,8 +11,8 @@
 #Oinf > div {
   position: relative;
   border:1px solid red;
-  overflow: hidden;
-  transition: 2.3s;
+ /* overflow: hidden; */
+  transition: .3s;
 }
 
 .OinfL {/* Загрузка */
