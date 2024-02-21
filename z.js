@@ -13,7 +13,7 @@ var z = {
 var Oinf = {
   id: '#Oinf',//<div id="Oinf"></div>
   y: 50,//px Отступ Верх || Низ
-  /*  s: {number},//Сторона поивления
+  /*  s: {string},//Сторона поивления (left/right)
       s:undefined,//Окно полностью закрыто
   */
   /* 
@@ -83,13 +83,13 @@ var Oinf = {
         $('<div>').attr({
           class: 'Oinf'+(q.a>=0?q.a:'L'),
           'data-oinf': q.i
-        }).html(q.t)
+        }).css(Oinf.s, '-102%')
+        .html('<span>'+q.t+'</span>')
       );
       setTimeout(() => {//Для анимации
-        
         $(Oinf.id+' > [data-oinf="'+q.i+'"]')
-        .slideUp()
-        .css('width',0)
+        .css(Oinf.s, 0)
+        .find('span').slideDown(300)
       },50);
     },
     /* Oinf.sms.X(//Удоляем сообщение
