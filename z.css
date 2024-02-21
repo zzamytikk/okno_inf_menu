@@ -9,8 +9,10 @@
 }
 
 #Oinf > div {
-  
-  transition: .3s;
+  position: relative;
+  border:1px solid red;
+  overflow: hidden;
+  transition: 2.3s;
 }
 
 .OinfL {/* Загрузка */
