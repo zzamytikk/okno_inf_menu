@@ -11,7 +11,8 @@
 #Oinf > div {
   position: relative;
   border:1px solid red;
- /* overflow: hidden; */
+  overflow: hidden; 
+ height: 0;
   transition: .3s;
 }
 

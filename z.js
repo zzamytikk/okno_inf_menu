@@ -78,18 +78,23 @@ var Oinf = {
       if ($(Oinf.id+' > [data-oinf="'+q.i+'"]')[0]) {//Нашли старое сообшение
         O.X(q.i, 1);//Удалим
       }
-      $(Oinf.id).append(//Добовляем сообщение
+      $(Oinf.id).append(//Добавляем сообщение
         //'<div class="Oinf'+(q.a>=0?q.a:'L')+'" data-oinf="'+(i || O.i)+'">'+q.t+'</div>'
         $('<div>').attr({
           class: 'Oinf'+(q.a>=0?q.a:'L'),
           'data-oinf': q.i
-        }).css({height: '100%'})
-        .html(q.t)
+        }).html(q.t)
       );
+      setTimeout(() => {//Для анимации
+        
+        $(Oinf.id+' > [data-oinf="'+q.i+'"]')
+        .slideUp()
+        .css('width',0)
+      },50);
     },
     /* Oinf.sms.X(//Удоляем сообщение
       'load'//id сообщения
-    ); 
+    );
     Oinf.sms.X(//Запускается из Oinf.sms.$
       '{string}', //id сообщения
       1, //Не закрывать окно
