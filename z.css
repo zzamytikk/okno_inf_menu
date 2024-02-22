@@ -10,10 +10,13 @@
 
 #Oinf > div {
   position: relative;
-  transition: .3s;
-}
-#Oinf > div > span {display: none;
+  transition: .6s;
   
+  background: seagreen;
+}
+#Oinf > div > div {display:none;
+  
+  background: firebrick;
 }
 
 .OinfL {/* Загрузка */

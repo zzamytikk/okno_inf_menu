@@ -56,7 +56,7 @@ var Oinf = {
         })
       );
   
-        O.sms.$(q);//Добовляем сообщение
+        O.sms.$(q, 1);//Добовляем сообщение
   
         setTimeout(() => {//Задержка для начала анимации открытия
         $(O.id).css({//Открываем
@@ -71,26 +71,30 @@ var Oinf = {
     //i: 0,//id сообщений для автоудаления
     /* Oinf.sms(
       q,//Настройки
+      1//Первое открытие окна (Запуск из Oinf.$())
+        //1 = Убераем анимацию поивления сообщения
     ); */
-    $: function(q) {//Добовляем сообщение || Заменим на новое
+    $: function(q,X) {//Добовляем сообщение || Заменим на новое
       let O = this;
 
       if ($(Oinf.id+' > [data-oinf="'+q.i+'"]')[0]) {//Нашли старое сообшение
         O.X(q.i, 1);//Удалим
       }
       $(Oinf.id).append(//Добавляем сообщение
-        //'<div class="Oinf'+(q.a>=0?q.a:'L')+'" data-oinf="'+(i || O.i)+'">'+q.t+'</div>'
         $('<div>').attr({
           class: 'Oinf'+(q.a>=0?q.a:'L'),
           'data-oinf': q.i
-        }).css(Oinf.s, '-102%')
-        .html('<span>'+q.t+'</span>')
+        }).css(Oinf.s, X?0:'-102%')//left || right
+          .html('<div'+(X?' style="display:block"':'')+'>'+q.t+'</div>')
       );
-      setTimeout(() => {//Для анимации
-        $(Oinf.id+' > [data-oinf="'+q.i+'"]')
-        .css(Oinf.s, 0)
-        .find('span').slideDown(300)
-      },50);
+      
+      if(!X){//Не первое сообщение
+        setTimeout(() => {//Поивление сообщения. анимации
+          $(Oinf.id+' > [data-oinf="'+q.i+'"]')
+            .css(Oinf.s, 0)//left || right
+            .find('div').slideDown(600)
+        },50);
+      }
     },
     /* Oinf.sms.X(//Удоляем сообщение
       'load'//id сообщения
