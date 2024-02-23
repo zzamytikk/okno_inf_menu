@@ -1,23 +1,27 @@
 #Oinf {opacity: 0;
   position: fixed;
+  padding: 3px;
   width: 150px;
   max-width: 250px;
   min-width: 50px;
   min-height: 30px;
-  background: #42445ADB;
-  transition: .6s;
+  background: #000d;
+ /* border: 1px solid #fff5;
+  outline: 1px solid #000d; */
+  transition: .6s;/* left, right */
 }
-
-#Oinf > div {
+#Oinf > h3 {/* Заголовок окна */
+  margin: 0 0 3px 0;
+  border-bottom: 1px solid #fff3;
+  color: greenyellow;
+  text-align: center;
+}
+#Oinf > div {/* Окна сообщений */
   position: relative;
-  transition: .6s;
-  
-  background: seagreen;
+  font-size: .8em;
+  transition: .6s;/* left, right */
 }
-#Oinf > div > div {display:none;
-  
-  background: firebrick;
-}
+#Oinf > div > div {display:none;}
 
 .OinfL {/* Загрузка */
   color: #fff;
