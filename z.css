@@ -5,10 +5,17 @@
   max-width: 250px;
   min-width: 50px;
   min-height: 30px;
+  font-size: .9em;
   background: #000d;
  /* border: 1px solid #fff5;
   outline: 1px solid #000d; */
   transition: .6s;/* left, right */
+}
+#Oinf > button {/* Закрыть окно (Поевление через 15сек открытого окна) */
+  position: absolute;
+  top:-.8em;
+  right:-.8em;
+  display: none;
 }
 #Oinf > h3 {/* Заголовок окна */
   margin: 0 0 3px 0;
