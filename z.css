@@ -25,23 +25,74 @@
 }
 #Oinf > div {/* Окна сообщений */
   position: relative;
-  font-size: .8em;
+  padding-left: .8em;
   transition: .6s;/* left, right */
 }
-#Oinf > div > div {display:none;}
-
-.OinfL {/* Загрузка */
-  color: #fff;
+#Oinf > div > div {display:none;
+  font-size: .8em;
 }
-.Oinf0 {/* Ошибка */
+
+[class*="Oinf"]::after,[class*="Oinf"]::before {/* для всех сообщений*/
+  position: absolute;
+  top:.1em;
+  left:0;
+  width: .55em;
+  height: .55em;
+}
+.OinfL {/* Загрузка */
+  color: #fffb;
+}
+.OinfL::after,.OinfL::before {/* Для загрузки */
+  content: '';
+  border: .1em solid;
+  border-radius: 50%;
+}
+.OinfL::after {
+  border-color: #0b0 #0b0 #0000 #0000;
+  animation: A360 1s infinite linear;
+}
+@keyframes A360 {
+  100% {transform: rotate(360deg);}
+}
+.OinfL::before {
+  border-color: #fff2;
+}
+
+[class*="Oinf"]:not(.OinfL)::after {
+  top:.4em;
+  line-height: 0;
+}
+.Oinf0 {/* ✗ Ошибка */
+  color: #f00b;
+}
+.Oinf0::after {
+  content: '✗';
   color: red;
 }
-.Oinf1 {/* Хорошо */
+
+.Oinf1 {/* ✓ Хорошо */
+  color: #0b0b;
+}
+.Oinf1::after {
+  content: '✓';
   color: #0b0;
 }
-.Oinf2 {/* Сообшение */
+
+.Oinf2 {/* ✉ Сообшение */
+  color: #ff1b;
+}
+.Oinf2::after {
+  content: '✉';
+  top: .35em !important;
   color: #ff1;
 }
-.Oinf3 {/* Оповещение */
+
+.Oinf3 {/* ⚠ Оповещение */
   color: orange;
 }
+.Oinf3::after {
+  content: '⚠';
+  color: orange;
+}
+/* ★ */
+
