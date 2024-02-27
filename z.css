@@ -88,11 +88,12 @@
 }
 
 .Oinf3 {/* ⚠ Оповещение */
-  color: orange;
+  color: #f90a;
 }
 .Oinf3::after {
   content: '⚠';
-  color: orange;
+  color: #f90;
+  top: .5em !important;
+  font-size: .9em;
 }
 /* ★ */
-

@@ -39,22 +39,30 @@
     <button onclick="Oinf.sms.X()" x>X</button>, 
     <button onclick="Oinf.X()" x>Закрыть всё</button>
     <hr>
-    <button style="background: #fff;" onclick="Oinf.$({i:'prL',s:1,t:'Проверка сообщения'})">Загрузка</button>
-    <button style="background: #fff;" onclick="Oinf.$({i:'prL',s:1,t:'Проверка сообщения <b>Загрузка</b>'})">Загрузка...</button>
+    <div style="background: #999; text-align: right;">
+    <style>
+      span[class*="Oinf"] {
+        position: relative;
+        top: .15em;
+        left: -1em;
+      }
+    </style>
+    <span class="OinfL"></span><button style="background: #fff;" onclick="Oinf.$({i:'prL',s:1,t:'Проверка сообщения'})">Загрузка</button>
+    <button style="background: #fff;" onclick="Oinf.$({i:'prL',s:1,t:'Проверка сообщения <b>Загрузка</b>'})">...</button>
     <button onclick="Oinf.sms.X('prL')" x>X</button><br>
-    <button style="background: red;" onclick="Oinf.$({i:'pr0',s:1,a:0,t:'Проверка сообщения'})">Ошибка</button>
-    <button style="background: red;" onclick="Oinf.$({i:'pr0',s:1,a:0,t:'Проверка сообщения <b>Ошибка</b>'})">Ошибка...</button>
+    <span class="Oinf0"></span><button style="background: red;" onclick="Oinf.$({i:'pr0',s:1,a:0,t:'Проверка сообщения'})">Ошибка</button>
+    <button style="background: red;" onclick="Oinf.$({i:'pr0',s:1,a:0,t:'Проверка сообщения <b>Ошибка</b>'})">...</button>
     <button onclick="Oinf.sms.X('pr0')" x>X</button><br>
-    <button style="background: #0b0;" onclick="Oinf.$({i:'pr1',s:1,a:1,t:'Проверка сообщения'})">Хорошо</button>
-    <button style="background: #0b0;" onclick="Oinf.$({i:'pr1',s:1,a:1,t:'Проверка сообщения <b>Хорошо</b>'})">Хорошо...</button>
+    <span class="Oinf1"></span><button style="background: #0b0;" onclick="Oinf.$({i:'pr1',s:1,a:1,t:'Проверка сообщения'})">Хорошо</button>
+    <button style="background: #0b0;" onclick="Oinf.$({i:'pr1',s:1,a:1,t:'Проверка сообщения <b>Хорошо</b>'})">...</button>
     <button onclick="Oinf.sms.X('pr1')" x>X</button><br>
-    <button style="background: #ff1;" onclick="Oinf.$({i:'pr2',s:1,a:2,t:'Проверка сообщения'})">Сообшение</button>
-    <button style="background: #ff1;" onclick="Oinf.$({i:'pr2',s:1,a:2,t:'Проверка сообщения <b>Сообшение</b>'})">Сообшение...</button>
+    <span class="Oinf2"></span><button style="background: #ff1;" onclick="Oinf.$({i:'pr2',s:1,a:2,t:'Проверка сообщения'})">Сообшение</button>
+    <button style="background: #ff1;" onclick="Oinf.$({i:'pr2',s:1,a:2,t:'Проверка сообщения <b>Сообшение</b>'})">...</button>
     <button onclick="Oinf.sms.X('pr2')" x>X</button><br>
-    <button style="background: orange;" onclick="Oinf.$({i:'pr3',s:1,a:3,t:'Проверка сообщения'})">Оповещение</button>
-    <button style="background: orange;" onclick="Oinf.$({i:'pr3',s:1,a:3,t:'Проверка сообщения <b>Оповещение</b>'})">Оповещение...</button>
+    <span class="Oinf3"></span><button style="background: orange;" onclick="Oinf.$({i:'pr3',s:1,a:3,t:'Проверка сообщения'})">Оповещение</button>
+    <button style="background: orange;" onclick="Oinf.$({i:'pr3',s:1,a:3,t:'Проверка сообщения <b>Оповещение</b>'})">...</button>
     <button onclick="Oinf.sms.X('pr3')" x>X</button><br>
-      
+    </div>
   </div>
   
   <div style="height: 1700px"></div>
