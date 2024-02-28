@@ -9,7 +9,7 @@
   background: #000d;
  /* border: 1px solid #fff5;
   outline: 1px solid #000d; */
-  transition: .6s;/* left, right */
+  transition: 2.6s;/* left, right */
 }
 #Oinf > button {/* Закрыть окно (Поевление через 15сек открытого окна) */
   position: absolute;
@@ -23,10 +23,10 @@
   color: greenyellow;
   text-align: center;
 }
-#Oinf > div {/* Окна сообщений */
+#Oinf > div {/* сообщения */
   position: relative;
   padding-left: .8em;
-  transition: .6s;/* left, right */
+  transition: 1.6s;/* Вывод сообщений left, right */
 }
 #Oinf > div > div {display:none;
   font-size: .8em;
