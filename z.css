@@ -35,7 +35,7 @@
 [class*="Oinf"]::after,[class*="Oinf"]::before {/* для всех сообщений*/
   position: absolute;
   top:.1em;
-  left:0;
+  left: 0;
   width: .55em;
   height: .55em;
 }
@@ -88,7 +88,7 @@
 }
 
 .Oinf3 {/* ⚠ Оповещение */
-  color: #f90a;
+  color:#f90a;
 }
 .Oinf3::after {
   content: '⚠';

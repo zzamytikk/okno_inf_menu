@@ -97,7 +97,7 @@ var Oinf = {
           .html('<div'+(X?' style="display:block"':'')+'>'+q.t+'</div>')
       );
       console.error('+1 сообщение! Всего смс:', $(O.id+' > div[data-oinf]').length);
-      
+
       if(!X){//Не первое сообщение
         setTimeout(() => {//Поивление сообщения. анимации
           $(O.id+' > [data-oinf="'+q.i+'"]').eq(-1)
