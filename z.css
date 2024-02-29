@@ -9,7 +9,7 @@
   background: #000d;
  /* border: 1px solid #fff5;
   outline: 1px solid #000d; */
-  transition: 2.6s;/* left, right */
+  transition: .6s;/* left, right */
 }
 #Oinf > button {/* Закрыть окно (Поевление через 15сек открытого окна) */
   position: absolute;
@@ -26,7 +26,7 @@
 #Oinf > div {/* сообщения */
   position: relative;
   padding-left: .8em;
-  transition: 1.6s;/* Вывод сообщений left, right */
+  transition: .6s;/* Вывод сообщений left, right */
 }
 #Oinf > div > div {display:none;
   font-size: .8em;
@@ -93,7 +93,7 @@
 .Oinf3::after {
   content: '⚠';
   color: #f90;
-  top: .5em !important;
-  font-size: .9em;
+  top: .6em !important;
+  font-size: .8em;
 }
 /* ★ */
