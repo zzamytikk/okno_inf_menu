@@ -121,7 +121,7 @@ var Oinf = {
       console.error('Oinf.sms.X(); Начинаем удоления сообщения data-oinf='+i+'! Всего смс:', $(O.id+' > div[data-oinf]').length, O.sms.n);
       
       if(b[0]){//Нашли сообщение для удаления
-        --O.sms.n; 
+        --O.sms.n;
         
         //if(!x && !$(O.id+' > div[data-oinf]')[1]){//Последние сообщение
         //Замена сообщения && 1 сообщение
