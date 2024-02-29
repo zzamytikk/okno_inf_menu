@@ -73,14 +73,15 @@ var Oinf = {
     $: (q,X) => {//Добовляем сообщение?. || Заменим на новое
       console.error('Oinf.sms.$(); Добовляем сообщение!'+(X?' Запуск из Oinf.$':''), q);
       
-      let O = Oinf;//Сократим
+      let O = Oinf, r;//Сократим
       
       if ($(O.id+' > [data-oinf="'+q.i+'"]')[0]) {//Нашли старое сообшение
         console.error('Нашли старое сообшение! Удалим его.');
         O.sms.X(q.i, 1);//Удалим без закрытия окна
+        r=1;//Не закрывали окно
       }
 
-      if(!X && !$(O.id+' > div[data-oinf]')[0]){//0 смс! удалили последнее
+      if(!r && !X && !$(O.id+' > div[data-oinf]')[0]){//0 смс! удалили последнее
         console.error('Вернём окно! Стало смс', $(O.id+' > div[data-oinf]').length);
         clearTimeout(O.T);//Отмена удаление окна
         let b=$(O.id).css({[O.s]: 0,opacity: 1})//Вернём окно
@@ -134,10 +135,11 @@ var Oinf = {
     );
     O.sms.aX(b);//Анимация закрытия смс и удоление. */
     aX: b => {//Анимация закрытия смс и удоление.
+      console.error('-1 сообщение. Всего смс:', $(Oinf.id + ' > div[data-oinf]').length);
+
       b.css(Oinf.s, '-100%') //left/right
         .find('div').slideUp(600, () => {
           b.remove();
-          console.error('-1 сообщение. Всего смс:', $(Oinf.id + ' > div[data-oinf]').length);
         });
     }
   },
