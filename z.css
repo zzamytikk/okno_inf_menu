@@ -28,7 +28,7 @@
   padding-left: .8em;
   transition: .6s;/* Вывод сообщений left, right */
 }
-#Oinf > div > div {display:none;
+#Oinf > div > div {display: none;
   font-size: .8em;
 }
 
