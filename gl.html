@@ -5,22 +5,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Окно ✓ Плавное поивление `Инфо-Меню`</title>
+  <link rel="stylesheet" href="gl.css">
   
   <link rel="stylesheet" href="z.css">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="z.js"></script>
 </head>
-<body>
-  <div id="id">...</div>
-
-  <style>
-    button {
-      margin: 5px 0;
-    }
-    button[x] {
-      background: red;
-    }
-  </style>
+<body><div id="id">...</div>
+  <header>
+    <div style="float: right; margin: -4px 5px 0 0;">
+      <button onclick="shablon.bodyS.$()">scrol</button>
+      <button onclick="shablon.tema.$()">bg</button>
+      <!-- <button id="m">☰</button> -->
+    </div>
+    <nav></nav>
+  </header>
+  <main>
   <div style="border: 1px solid green; text-align: center">
     <div>Верх с: 
       <button onclick="Oinf.$({i:'vl',s:1,t:'Верх лево vl'})">Лева vl</button>
@@ -64,7 +64,50 @@
     <button onclick="Oinf.sms.X('pr3')" x>X</button><br>
     </div>
   </div>
+  </main>
+  <footer></footer>
   
-  <div style="height: 1700px"></div>
+  <script>
+    var shablon = {
+      tema: {//Смена фона body
+        $:() => {//Чёрный/Белый
+          $('body').toggleClass('tema9');
+        }
+      },
+      bodyS: {//Добавим полосу прокрутки
+        $:() => {
+          $('body').toggleClass('bodyS');
+        }
+      },
+      m:{//Меню
+        id:'#m',//id <bottom id="m">
+        $: function (q) {//Создаём
+          let O=this, t='';
+ 
+          $(O.id).click(e => {shablon.m.X()});//Открыть/Закрыть
+ 
+          (q.htm || []).forEach(e => {
+            t+='<button>'+e.n+'</button>';
+          });
+          
+          $('nav').html('<div>'+t+'</div>');
+         
+        },
+        X:q => {//Открыть/Закрыть
+          
+        }
+      }
+    };
+    /* shablon.m.$({//Меню
+      htm:[//Список <button>
+        {//0
+          n: 'Фон Светлый/Тёмный (body)',//Название
+          t: '',//Теги <...
+          
+          >
+        }
+      ]
+    }); */
+  </script>
 </body>
 </html>
