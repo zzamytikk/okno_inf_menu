@@ -10,12 +10,6 @@
   outline: 3px solid #000d;
   transition: 1s;/* left, right */
 }
-#Oinf > button {/* Закрыть окно (Поевление через 15сек открытого окна) */
-  position: absolute;
-  top:-.8em;
-  right:-.8em;
-  display: none;
-}
 #Oinf > h3 {/* Заголовок окна */
   margin: 0 0 3px 0;
   border-bottom: 1px solid #fff3;
