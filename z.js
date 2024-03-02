@@ -1,7 +1,9 @@
 var Oinf = {
   id: '#Oinf',//<div id="Oinf"></div>
   Z: 'Уведомления',//Заголовок
-  y: 50,//px Отступ Верх || Низ
+  y: '1.5rem',/* Отступ Верх || Низ
+    y: 40,      //px {number}
+    y: '2.5rem',//{string} */
   /*  s: {string},//Сторона поивления (left/right)
       s:undefined,//Окно полностью закрыто */
   /*
@@ -53,7 +55,7 @@ var Oinf = {
         setTimeout(() => {//Задержка для начала анимации открытия
           $(O.id).css({//Открываем
             opacity:1,
-            [O.s]: 0//Открываем анимацию
+            [O.s]: -1//Открываем анимацию
           });
         }, 1);
       }
@@ -83,7 +85,7 @@ var Oinf = {
       if(!r && !X && !$(O.id+' > div[data-oinf]')[0]){//0 смс! удалили последнее
         console.error('Вернём окно! Стало смс', $(O.id+' > div[data-oinf]').length);
         clearTimeout(O.T);//Отмена удаление окна
-        b=$(O.id).css({[O.s]: 0,opacity: 1})//Вернём окно
+        b=$(O.id).css({[O.s]: -1,opacity: 1})//Вернём окно
           .children('div').not('[data-oinf]');//Нашли старое смс
         O.sms.aX(b);//Анимация закрытия смс и удоление.
       }
@@ -94,6 +96,7 @@ var Oinf = {
           'data-oinf': q.i
         }).css(O.s, X?0:'-100%')//left || right
           .html('<div'+(X?' style="display:block"':'')+'>'+q.t+'</div>')
+          //display: block;//Для 1-го открытия окна
       );
       console.error('+1 сообщение! Всего смс:', $(O.id+' > div[data-oinf]').length);
       Oinf.A.$(q, b=$(O.id+' > [data-oinf="'+q.i+'"]').eq(-1));//Автозакрытие сообщений
@@ -101,7 +104,7 @@ var Oinf = {
       if(!X){//Не первое сообщение
         setTimeout(() => {//Поивление сообщения. анимации
           b.css(O.s, 0)//left || right
-            .find('div').slideDown(300)
+            .find('div').show(600)
         },1);
       }
     },
@@ -142,8 +145,8 @@ var Oinf = {
     aX: b => {//Анимация закрытия смс и удоление.
       console.error('-1 сообщение. Всего смс:', $(Oinf.id + ' > div[data-oinf]').length);
 
-      b.css(Oinf.s, '-100%') //left/right
-        .find('div').slideUp(600, () => {
+      b.css(Oinf.s, '-100%')//left/right
+        .find('div').animate({width:0, height:0},900, () => {
           b.remove();
         });
     }

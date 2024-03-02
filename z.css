@@ -1,15 +1,14 @@
 #Oinf {opacity: 0;
   position: fixed;
   padding: 3px;
-  width: 150px;
+  min-width: 140px;
   max-width: 250px;
-  min-width: 50px;
-  min-height: 30px;
   font-size: .9em;
   background: #000d;
- /* border: 1px solid #fff5;
-  outline: 1px solid #000d; */
-  transition: .6s;/* left, right */
+  border: 1px solid #fff5;
+  border-radius: 2px;
+  outline: 3px solid #000d;
+  transition: 1s;/* left, right */
 }
 #Oinf > button {/* Закрыть окно (Поевление через 15сек открытого окна) */
   position: absolute;
@@ -20,13 +19,14 @@
 #Oinf > h3 {/* Заголовок окна */
   margin: 0 0 3px 0;
   border-bottom: 1px solid #fff3;
-  color: greenyellow;
+  color: #0b0c;
   text-align: center;
 }
 #Oinf > div {/* сообщения */
+  overflow: hidden;
   position: relative;
   padding-left: .8em;
-  transition: .6s;/* Вывод сообщений left, right */
+  transition: 1s;/* Вывод сообщений left, right */
 }
 #Oinf > div > div {display: none;
   font-size: .8em;
