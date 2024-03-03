@@ -76,7 +76,7 @@ var Oinf = {
       console.error('Oinf.sms.$(); Начинаем добавлять сообщение!'+(X?' Запуск из Oinf.$':''), q);
       
       let O = Oinf, r, b;//Сократим
-      //clearTimeout(O.T);
+      clearTimeout(this.T);
 
       if ($(O.id+' > [data-oinf="'+q.i+'"]')[0]) {//Нашли старое сообшение
         console.error('Нашли старое сообшение! Удалим его.');
@@ -96,7 +96,7 @@ var Oinf = {
         $('<div>').attr({
           class: 'Oinf'+(q.a>=0?q.a:'L'),
           'data-oinf': q.i
-        }).css(O.s, X?0:'-100%')//left || right
+        }).css({[O.s]: X?0:'-100%', filter:'blur('+(X?0:20)+'px)'})//left || right, Показываем первое сообщение
           .html('<div'+(X?' style="display:block"':'')+'>'+q.t+'</div>')
           //display: block;//Для 1-го открытия окна
       );
@@ -106,7 +106,8 @@ var Oinf = {
       if(!X){//Не первое сообщение
         setTimeout(() => {//Поивление сообщения. анимации
           b.css(O.s, 0)//left || right
-            .find('div').show(600)
+            .children('div').show(300)
+            .parent().css('filter','blur(0)')
         },1);
       }
       
@@ -152,10 +153,11 @@ var Oinf = {
     aX: b => {//Анимация закрытия смс и удоление.
       console.error('-1 сообщение. Всего смс:', $(Oinf.id + ' > div[data-oinf]').length);
 
-      b.css(Oinf.s, '-100%')//left/right
-        .find('div').animate({width:0, height:0},900, () => {
-          b.remove();
-        });
+      b=(b.children('div')).animate({height:0},600, () => {
+        b.animate({width:0},600, () => {
+          b.parent().remove();
+        })
+      });
     }
   },
   A:{//Автозакрытие сообщений
@@ -204,7 +206,7 @@ var Oinf = {
     }).children('div[data-oinf]').removeAttr('data-oinf');//Корекция для остановки закрытия окна
 
     O.T = setTimeout(() => {//Удалим полностью
-      //$(O.id).remove();
+      $(O.id).remove();
       console.error('Окно удалено!', $(O.id+' > div[data-oinf]').length);
       //O.sms.n=0;
     }, 600);

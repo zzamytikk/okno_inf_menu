@@ -17,6 +17,7 @@
   text-align: center;
 }
 #Oinf > div {/* сообщения */
+  filter: blur(20px);
   overflow: hidden;
   position: relative;
   padding-left: .8em;
