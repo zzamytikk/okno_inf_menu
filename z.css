@@ -1,4 +1,4 @@
-#Oinf {opacity: 0;
+#Oinf {opacity: 0; z-index: 999;
   position: fixed;
   padding: 3px;
   min-width: 140px;
@@ -8,23 +8,33 @@
   border: 1px solid #fff5;
   border-radius: 2px;
   outline: 3px solid #000d;
+  user-select: none;/* Убераем выделение текста */
+  box-shadow: 0 0 7px #000, inset 0 0 1px #fff4;
   transition: 1s;/* left, right */
 }
 #Oinf > h3 {/* Заголовок окна */
   margin: 0 0 3px 0;
+  padding-bottom: 2px;
   border-bottom: 1px solid #fff3;
-  color: #0b0c;
+  color: #afac;
+  letter-spacing: 1px;
   text-align: center;
 }
 #Oinf > div {/* сообщения */
   filter: blur(20px);
   overflow: hidden;
   position: relative;
-  padding-left: .8em;
+  padding-left: 1em;
   transition: 1s;/* Вывод сообщений left, right */
 }
 #Oinf > div > div {display: none;
+  margin-top: 1px;
   font-size: .8em;
+  text-shadow: 0 1px 1px #000;
+}
+#Oinf > div > div > i {
+  color: #39f;
+  font-style: normal;
 }
 
 [class*="Oinf"]::after,[class*="Oinf"]::before {/* для всех сообщений*/
@@ -35,7 +45,7 @@
   height: .55em;
 }
 .OinfL {/* Загрузка */
-  color: #fffb;
+  color: #fffd
 }
 .OinfL::after,.OinfL::before {/* Для загрузки */
   content: '';
@@ -59,6 +69,7 @@
 }
 .Oinf0 {/* ✗ Ошибка */
   color: #f00b;
+  color: #f77;
 }
 .Oinf0::after {
   content: '✗';
@@ -66,15 +77,15 @@
 }
 
 .Oinf1 {/* ✓ Хорошо */
-  color: #0b0b;
+  color: #8f8;
 }
 .Oinf1::after {
   content: '✓';
-  color: #0b0;
+  color:#3f3
 }
 
 .Oinf2 {/* ✉ Сообшение */
-  color: #ff1b;
+  color: #ff7;
 }
 .Oinf2::after {
   content: '✉';
@@ -83,11 +94,11 @@
 }
 
 .Oinf3 {/* ⚠ Оповещение */
-  color:#f90a;
+  color: #fc5;
 }
 .Oinf3::after {
-  content: '⚠';
-  color: #f90;
-  top: .6em !important;
+  content: '★';
+  color: #fc0;
+  top: .5em !important;
   font-size: .8em;
 }
