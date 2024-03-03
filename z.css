@@ -27,15 +27,15 @@
   padding: 1px 0 0 1em;
   transition: 1s;/* Вывод сообщений left, right */
 }
-#Oinf > div > div::after {/* полоса загрузки */
+#Oinf > div > div::after {/* Полоса загрузки */
   content: '';
   position: absolute;
   right: 0;
   bottom: 0;
+  margin: 1px 0;
   width: 1px;
   height: 100%;
-  padding: 1px 0;
-  background: red;
+  background: #ff07;
 }
 
 #Oinf > div > div {display: none;
