@@ -24,11 +24,21 @@
   filter: blur(20px);
   overflow: hidden;
   position: relative;
-  padding-left: 1em;
+  padding: 1px 0 0 1em;
   transition: 1s;/* Вывод сообщений left, right */
 }
+#Oinf > div > div::after {/* полоса загрузки */
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  padding: 1px 0;
+  background: red;
+}
+
 #Oinf > div > div {display: none;
-  margin-top: 1px;
   font-size: .8em;
   text-shadow: 0 1px 1px #000;
 }
@@ -100,5 +110,5 @@
   content: '★';
   color: #fc0;
   top: .5em !important;
-  font-size: .8em;
+  font-size: .85em;
 }
