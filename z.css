@@ -24,27 +24,26 @@
   filter: blur(20px);
   overflow: hidden;
   position: relative;
-  padding: 1px 0 0 1em;
+  padding: 1px 4px 0 1em;
   transition: 1s;/* Вывод сообщений left, right */
-}
-#Oinf > div > div::after {/* Полоса загрузки */
-  content: '';
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  margin: 1px 0;
-  width: 1px;
-  height: 100%;
-  background: #ff07;
 }
 
 #Oinf > div > div {display: none;
   font-size: .8em;
   text-shadow: 0 1px 1px #000;
 }
-#Oinf > div > div > i {
+#Oinf > div > div > i {/* Подсветка синим */
   color: #39f;
   font-style: normal;
+}
+#Oinf > div > span {/* Полоса загрузки */
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 1px 0;
+  width: 1px;
+  height: 100%;
+  background: #f009;
 }
 
 [class*="Oinf"]::after,[class*="Oinf"]::before {/* для всех сообщений*/
