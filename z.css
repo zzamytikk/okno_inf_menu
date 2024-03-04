@@ -36,14 +36,13 @@
   color: #39f;
   font-style: normal;
 }
-#Oinf > div > span {/* Полоса загрузки */
+#Oinf > div > span {/* Полоса загрузки (До автозакрытия) */
   position: absolute;
   right: 0;
   bottom: 0;
   margin: 1px 0;
-  width: 1px;
+  border-right: 1px solid #0b09;
   height: 100%;
-  background: #f009;
 }
 
 [class*="Oinf"]::after,[class*="Oinf"]::before {/* для всех сообщений*/

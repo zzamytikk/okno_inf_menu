@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="gl.css">
   
   <link rel="stylesheet" href="z.css">
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="z.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+  <script src="z.js" defer></script>
 </head>
 <body><div id="id">...</div>
   <header>
@@ -26,13 +26,13 @@
       <button onclick="Oinf.$({i:'vl',s:1,t:'Верх лево vl'})">Лева vl</button>
       <button onclick="Oinf.$({i:'vl',s:1,t:'Верх лево2 vl'})">Лева2 vl</button>
       <button onclick="Oinf.sms.X('vl')" x>X</button>, 
-      <button onclick="Oinf.$({i:'vp',s:2,a:0,t:'Верх право vp'})">Права vp</button>
+      <button onclick="Oinf.$({i:'vp',s:2,t:'Верх право vp'})">Права vp</button>
       <button onclick="Oinf.sms.X('vp')" x>X</button>
     </div>
     <div>Низ с: 
-      <button onclick="Oinf.$({i:'nl',s:3,a:1,t:'Низ лево nl'})">Лева nl</button>
+      <button onclick="Oinf.$({i:'nl',s:3,t:'Низ лево nl'})">Лева nl</button>
       <button onclick="Oinf.sms.X('nl')" x>X</button>,
-      <button onclick="Oinf.$({i:'np',s:4,a:2,t:'Низ право np'})">Права np</button>
+      <button onclick="Oinf.$({i:'np',s:4,t:'Низ право np'})">Права np</button>
       <button onclick="Oinf.sms.X('np')" x>X</button>
     </div>
     <button onclick="Oinf.$()">undefined</button>
