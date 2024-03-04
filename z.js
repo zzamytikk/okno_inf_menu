@@ -192,7 +192,7 @@ var Oinf = {
         console.error('Oinf.A.$(); Автозакрытие сообщений! id для записи='+q.i+'. Установим задержку на', O.v[q.a],'сек.');
         
         setTimeout(() => {
-          b.children('span').css({transition: (O.v[q.a]+2)+'s',height:0,'border-color':'#f009'});
+          b.children('span').css({transition: (O.v[q.a]+2)+'s',height:0,'border-color':'#f00'});
         }, 1);
         
         S.a[q.i]=setTimeout(()=>{//Удалим через
