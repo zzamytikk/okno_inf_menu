@@ -16,7 +16,7 @@ var Oinf = {
   /*
   Oinf.$({//Запуск
     i: {string}, //*id сообщения || 
-      i: 'load',   //•id Для удаления сообщений || Замена на новое
+      i: 'html',   //•id Для удаления сообщений || Замена на новое
 
     a: {number},//*Автозакрытие
            //           •Через:   •Цвет:
@@ -37,8 +37,10 @@ var Oinf = {
     t: {string/html}, //*Содержание сообщения
       t: '<b>Загрузка</b>', //•
         ° <i> = Выделит текст синим
-  }); */
-  $: (q={}) => {//Запуск
+  });
+  Oinf.$('html');//Удоляем сообщение!
+  */
+  $: q => {//Запуск
     let O = Oinf;//Сократим
     console.error('СТАРТУЕМ! Oinf.$();', q);
     
@@ -67,6 +69,8 @@ var Oinf = {
           });
         }, 1);
       }
+    } else if(typeof q == 'string') {//Удоляем сообщение!
+      O.sms.X(q);
     } else {
       console.error('if(q.t['+q.t+'] && ['+q.i+']q.i)//Текст сообщения && id сообщения');
     }
@@ -211,16 +215,17 @@ var Oinf = {
     
     clearTimeout(O.T);
     clearTimeout(O.sms.T);//Автозакрытие окна через 30сек
-    
-    let x=$(O.id).css({//анимация
-      opacity: 0,
-      [O.s]: '-100%'
-    }).children('div[data-oinf]').removeAttr('data-oinf');//Корекция для остановки закрытия окна
+    setTimeout(() => {//Помогает когда окно неуспело открытся и пришло закрыть его
+      let x=$(O.id).css({//анимация
+        opacity: 0,
+        [O.s]: '-100%'
+      }).children('div[data-oinf]').removeAttr('data-oinf');//Корекция для остановки закрытия окна
+    }, 1);
 
     O.T = setTimeout(() => {//Удалим полностью
-      $(O.id).remove();
+      //$(O.id).remove();
       console.error('Окно удалено!', $(O.id+' > div[data-oinf]').length);
       //O.sms.n=0;
     }, 600);
   }
-};
+};Oinf.$({i:'html',s:1,t:'Формирование страницы!'});
