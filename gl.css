@@ -1,5 +1,5 @@
 :root {
-      
+   
 }
 .tema8 {
   --C: #000;/* color */
@@ -8,6 +8,9 @@
 .tema9 {
   --C: #ccc;
   --bg: #000;
+}
+html {
+  font-size: 16px;
 }
 
 body {
