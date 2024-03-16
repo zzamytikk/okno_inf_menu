@@ -1,3 +1,7 @@
+/*  ✪ https://zam.usite.pro/publ/
+    ✫ Версия 1.0.0
+    © Copyright Плюшки для сайтов 2023
+*/
 var Oinf = {
   id: '#Oinf',//<div id="Oinf"></div>
   Z: 'Уведомления',//Заголовок
