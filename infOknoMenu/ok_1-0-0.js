@@ -75,10 +75,7 @@ var Oinf = {
           O.sms.$(q, 1);//Добовляем сообщение
     
           setTimeout(() => {//Задержка для начала анимации открытия
-            $(O.id).css({//Открываем
-              opacity:1,
-              [O.s]: -1//Открываем анимацию
-            });
+            $(O.id).css({[O.s]: -1});
           }, 1);
         }
       } else if(typeof q == 'string') {//Удоляем сообщение!
@@ -112,7 +109,7 @@ var Oinf = {
 
       if(!r && !X && !$(O.id+' > div[data-oinf]')[0]){//0 смс! удалили последнее
         console.error('Вернём окно! Стало смс', $(O.id+' > div[data-oinf]').length);
-        b=$(O.id).css({[O.s]: -1,opacity: 1})//Вернём окно
+        b=$(O.id).css({[O.s]: -1})//Вернём окно
           .children('div').not('[data-oinf]');//Нашли старое смс
         this.aX(b);//Анимация закрытия смс и удоление.
       }
@@ -229,10 +226,9 @@ var Oinf = {
     clearTimeout(O.T);
     clearTimeout(O.sms.T);//Автозакрытие окна через 30сек
     O.T = setTimeout(() => {//Помогает когда окно неуспело открытся и пришло закрыть его
-      let x=$(O.id).css({//анимация
-        opacity: 0,
-        [O.s]: '-100%'
-      }).children('div[data-oinf]').removeAttr('data-oinf');//Корекция для остановки закрытия окна
+      let x=$(O.id).css({[O.s]: '-100%'})//анимация
+      .children('div[data-oinf]')
+      .removeAttr('data-oinf');//Корекция для остановки закрытия окна
       
       O.T = setTimeout(() => {//Удалим полностью после закрытия анимации
         $(O.id).remove();
