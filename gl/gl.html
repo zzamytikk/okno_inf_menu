@@ -1,44 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html><div id="hLoad" style="z-index:999;position:fixed;top:0;right:0;width:100%;height:2px;background:red;transition:1s;"></div><!-- Загрузка сайта -->
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Окно ✓ Плавное поивление `Инфо-Меню`</title>
-  <link !href="https://zam.usite.pro/db/all/Git/gl/gl.css" rel="stylesheet">
-  <link rel="stylesheet" href="/gl/gl.css">
-  <link rel="stylesheet" href="/infOknoMenu/ok_1-0-0.css">
-  
+  <title>Информационное окно ✓ `Инфо-Подсказки`</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Material+Icons|Comfortaa|Istok+Web:400,700&amp;subset=cyrillic");
+  </style>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
-  <link href="https://zam.usite.pro/css/z.css" rel="stylesheet">
-  <script src="https://zam.usite.pro/js/z-m.js" defer></script>
   
-  <script !src="https://zam.usite.pro/db/all/Git/gl/gl.js" defer></script>
-  <script src="/gl/gl.js" defer></script>
+  <!-- ucoz -->
+  <link href="https://zam.usite.pro/css/z.css" rel="stylesheet">
+  <script src="https://zam.usite.pro/js/z.js" defer></script>
+  
+  <!-- Для шаблона www (Для всех шаблонов): -->
+  <link href="https://zam.usite.pro/db/all/Git/gl/gl.css" rel="stylesheet">
+  <script src="https://zam.usite.pro/db/all/Git/gl/gl.js" defer></script>
+  <!-- Для шаблона localhost: -->
+  <link !href="/gl/gl.css" rel="stylesheet">
+  <script !src="/gl/gl.js" defer></script>
+
+  <!-- Измени путь на свой проект: -->
+  <link href="/infOknoMenu/ok_1-0-0.css" rel="stylesheet">
   <script src="/infOknoMenu/ok_1-0-0.js" defer></script>
 </head>
 <body>
   <header><nav></nav></header>
   <main>
-    <div style="border: 1px solid green; text-align: center">
-      <div>Верх с:
-        <button onclick="Oinf.$({id:'vl',t:'Верх лево vl'})">Лева vl</button>
-        <button onclick="Oinf.$({id:'vl',t:'Верх лево2 vl'})">Лева2 vl</button>
+    <fieldset>
+      <legend>Панель управления</legend>
+      <div style="display:flex; justify-content: space-between;">
+      <div>
+        Верх с:
+        <div style="margin-top: .4rem">Низ с:</div>
+      </div>
+      <div style="text-align: right">
+        <button onclick="Oinf.$({id:'vl',s: 1,t:'Верх лево vl'})">Лева vl</button>
+        <button onclick="Oinf.$({id:'vl',s: 1,t:'Верх лево2 vl'})">Лева2 vl</button>
+        <br>
+        <button onclick="Oinf.$({id:'nl',s:3,t:'Низ лево nl'})">Лева nl</button>
+      </div><div>
         <button onclick="Oinf.sms.X('vl')" x>X</button>,
+        <br>
+        <button onclick="Oinf.sms.X('nl')" x>X</button>,
+      </div><div>
         <button onclick="Oinf.$({id:'vp',s:2,t:'Верх право vp'})">Права vp</button>
         <button onclick="Oinf.sms.X('vp')" x>X</button>
-      </div>
-      <div>Низ с:
-        <button onclick="Oinf.$({id:'nl',s:3,t:'Низ лево nl'})">Лева nl</button>
-        <button onclick="Oinf.sms.X('nl')" x>X</button>,
+        <br>
         <button onclick="Oinf.$({id:'np',s:4,t:'Низ право np'})">Права np</button>
         <button onclick="Oinf.sms.X('np')" x>X</button>
-      </div>
-      <button onclick="Oinf.$()">undefined</button>
-      <button onclick="Oinf.sms.X()" x>X</button>,
-      <button onclick="Oinf.X()" x>Закрыть всё</button>
+      </div></div>
       <hr>
-      <div style="background: #999; text-align: right;">
+      <div style="text-align:center">
+        <button onclick="Oinf.X()" x>Закрыть всё</button>
+      </div>
+      <hr>
+      <div style="background: #9992; text-align: right;">
         <style>
           span[class*="Oinf"] {
             position: relative;
@@ -46,33 +64,124 @@
             left: -1em;
           }
         </style>
-        <span class="OinfL"></span><button style="background: #fff;" onclick="Oinf.$({id:'prL',t:'Проверка <i>сообщения</i>'})">Загрузка</button>
+        <span class="OinfL"></span><button style="background: #fff;" onclick="Oinf.$({id:'prL',t:'Загрузка раздела <i>Новости</i>'})">Загрузка</button>
         <button style="background: #fff;" onclick="Oinf.$({id:'prL',t:'Проверка сообщения <b>Загрузка</b>'})">...</button>
         <button style="background: #fff;" onclick="Oinf.$({id:'prL',t:'Проверка сообщения <b>Загрузка</b> Длинный текст программы чики пики'})">....</button>
         <button onclick="Oinf.sms.X('prL')" x>X</button><br>
-        <span class="Oinf0"></span><button style="background: red;" onclick="Oinf.$({id:'pr0',x:0,t:'Проверка <i>сообщения</i>'})">Ошибка</button>
+        <span class="Oinf0"></span><button style="background: red;" onclick="Oinf.$({id:'pr0',x:0,t:'Ошибка! не удалось сохранить ваше <i>сообщение</i>'})">Ошибка</button>
+        <button style="background: red;" onclick="Oinf.$({id:'pr0',x:0,xS:5,t:'Ошибка! Закроем через <i>5сек</i>'})">Ошибка 5сек</button>
         <button style="background: red;" onclick="Oinf.$({id:'pr0',x:0,t:'Проверка сообщения <b>Ошибка</b>'})">...</button>
         <button onclick="Oinf.sms.X('pr0')" x>X</button><br>
-        <span class="Oinf1"></span><button style="background: #0b0;" onclick="Oinf.$({id:'pr1',x:1,t:'Проверка <i>сообщения</i>'})">Хорошо</button>
+        <span class="Oinf1"></span><button style="background: #0b0;" onclick="Oinf.$({id:'pr1',x:1,t:'Хорошо <i>страница перезаписана</i>'})">Хорошо</button>
         <button style="background: #0b0;" onclick="Oinf.$({id:'pr1',x:1,t:'Проверка сообщения <b>Хорошо</b>'})">...</button>
         <button onclick="Oinf.sms.X('pr1')" x>X</button><br>
-        <span class="Oinf2"></span><button style="background: #ff1;" onclick="Oinf.$({id:'pr2',x:2,t:'Проверка <i>сообщения</i>'})">Сообшение</button>
+        <span class="Oinf2"></span><button style="background: #ff1;" onclick="Oinf.$({id:'pr2',x:2,t:'Вам пришло <i>сообщение</i>'})">Сообшение</button>
         <button style="background: #ff1;" onclick="Oinf.$({id:'pr2',x:2,t:'Проверка сообщения <b>Сообшение</b>'})">...</button>
         <button onclick="Oinf.sms.X('pr2')" x>X</button><br>
-        <span class="Oinf3"></span><button style="background: orange;" onclick="Oinf.$({id:'pr3',x:3,t:'Проверка <i>сообщения</i>'})">Оповещение</button>
+        <span class="Oinf3"></span><button style="background: orange;" onclick="Oinf.$({id:'pr3',x:3,t:'Такая запись уже сушествует <i>#7439</i>'})">Оповещение</button>
         <button style="background: orange;" onclick="Oinf.$({id:'pr3',x:3,t:'Проверка сообщения <b>Оповещение</b>'})">...</button>
         <button onclick="Oinf.sms.X('pr3')" x>X</button><br>
         <button style="background: #0087ff;" onclick="Oinf.$({id:'pri',t:'Для выделения текста добавим тег i&gt; <i>Пример выделенного текста</i> о как!'})">Тег &lt;i></button>
         <button onclick="Oinf.sms.X('pri')" x>X</button><br>
       </div>
-    </div>
+    </fieldset>
+    <p class="ram-V2 gI-inf all-c1">Информационное окно предназначено для вывода сообщений, предназначенных для оповещения пользователя о результатах выполнения каких-либо действий. (Уведомления: 'Ошибка/Хорошо', Сообщения)</p>
+
+    <!-- HTML пример -->
+    <pre class="ram-n0 all-c5" data-ram-zag="HTML" id="cod"><code class="v-BG0">
+    &lt;!-- Добавить в &lt;head>..&lt;/head>: -->
+    &lt;script src="https://code.jquery.com/jquery-3.7.1.min.js" defer>&lt;/script><!-- Библиотека jQuery -->
+    &lt;link href="https://zam.usite.pro/db/publ/infOknoMenu/m_1-0-0.css" rel="stylesheet"><!-- Вид `Инфо-Подсказки` -->
+    &lt;script src="https://zam.usite.pro/db/publ/infOknoMenu/m_1-0-0.js" defer>&lt;/script><!-- Мозг `Инфо-Подсказки` -->
+    </code></pre>
+
+    Исходники: <a href="https://github" target="_blank">css</a>
+    
+    <!-- js пример -->
+    <pre class="ram-n0 all-c5" data-ram-zag="Примеры javascript" id="cod"><code class="v-BG0">
+    &lt;script>
+    Oinf.$({//✗ Покажем сообщение `Ошибка`:
+      id: 'err',
+      x: 0,
+      t: 'Ошибка! не удалось сохранить ваше <i>сообщение</i>'
+    });
+    
+    Oinf.$({//✓ Покажем сообщение `Хорошо`:
+      id: 'ok',
+      x: 1,
+      t: 'Материал был добавлен.'
+    });
+    
+    Oinf.$({//✉ Покажем `Сообщение`:
+      id: 'sms',
+      x: 2,
+      t: 'Вам пришло сообщение!'
+    });
+    
+    Oinf.$({//★ Покажем сообщение `Оповещение`:
+      id: 'opp',
+      x: 3,
+      t: 'Материал уже был добавлен.'
+    });
+    
+    Oinf.$({//Покажем сообщение `Загрузка`:
+      id: 'load',
+      t: 'Загрузка раздела <b>Новости</b>'
+    });
+    <!-- Для закрытия сообщения `Загрузка`: -->
+    Oinf.$('load');
+    &lt;/script>
+    </code></pre>
+    
+    <!-- js -->
+    <pre class="ram-n0 all-c5" data-ram-zag="javascript" id="cod"><code class="v-BG0">
+    <!-- Подробный пример вывода сообщений: -->
+    &lt;script>
+    Oinf.$({//★ Информационное окно ✓ `Инфо-Подсказки`
+      id: {string}, //* id сообщения
+        id: 'novost', //• id Для удаления сообщений || Замена на новое
+  
+      x: {number/array}, //* Автозакрытие/Формат смс
+             //Формат:     Через:   Цвет:
+        x: 0, //Ошибка     •15сек   •Красный   ✗
+        x: 1, //Хорошо     •10сек   •Зелёный   ✓
+        x: 2, //Сообшение  •15сек   •Жёлтый    ✉
+        x: 3, //Оповещение •15сек   •Оранжевый ★
+        x: undefined,//Загрузка (Закрываем сами через Oinf.$('novost');)
+        
+      xS: {number}, //Изменим время автозакрытия смс
+        xS: 30, //30сек
+  
+      s: {number}, //* Сторона поивления
+        s: 1, //• Верх слева
+        s: 2, //• Верх справа
+        s: 3, //• Низ слева
+        s: 4, //• Низ справа
+        s: undefined, //• S:2; по умолчанию (Верх справа)
+  
+      t: {string/html}, //* Содержание сообщения
+        t: '&lt;b>Загрузка&lt;/b> раздела &lt;i>Новости&lt;/i>',
+          //° &lt;i> = Выделит текст синим
+    });
+    &lt;/script>
+    </code></pre>
   </main>
   <footer></footer>
 
   <script>
+    let e = document.querySelector('#hLoad');
+    setTimeout(() => {//Загрузка сайта
+      e.style.width = '70%';
+    },1);
+
     document.addEventListener('DOMContentLoaded', () => {
       gl.$();//Запуск
-      Oinf.$('html')//Удоляем сообщение!
+      z.z.Start.$();
+      
+      setTimeout(() => {//Загрузка сайта
+        e.style.width=0;
+        e.style.background='#0b0';
+      },2);
     });
   </script>
 </body>
@@ -85,4 +194,5 @@
 >	  &gt;	  Знак "больше чем" (конец тега)
 "	  &quot;	Двойная кавычка
 ' 	&apos;	Апостроф (одинарная кавычка)
+•   &bull;
 -->
