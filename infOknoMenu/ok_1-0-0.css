@@ -2,6 +2,7 @@
     ✫ Версия 1.0.0
     © Copyright Плюшки для сайтов 2023
 */
+/* ✦ Информационное окно ✓ `Инфо-Подсказки` ✦ *//* #region */
 #Oinf {z-index: 999;
   position: fixed;
   padding: 3px;
@@ -24,6 +25,8 @@
   letter-spacing: 1px;
   text-align: center;
 }
+
+    /* ✦✦ Сообщения ✦✦ *//* #region */
 #Oinf > div {/* сообщения */
   filter: blur(20px);
   overflow: hidden;
@@ -39,14 +42,6 @@
 #Oinf > div > div > i {/* Подсветка синим */
   color: #39f;
   font-style: normal;
-}
-#Oinf > div > span {/* Полоса загрузки (До автозакрытия) */
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  margin: 1px 0;
-  border-right: 1px solid #0b09;
-  height: 100%;
 }
 
 [class*="Oinf"]::after,[class*="Oinf"]::before {/* для всех сообщений*/
@@ -114,3 +109,14 @@
   top: .55em !important;
   font-size: .85em;
 }
+    /* ✦✦ Сообщения ✦✦ *//* #endregion */
+
+#Oinf > div > span {/* Полоса загрузки (До автозакрытия) */
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 1px 0;
+  border-right: 1px solid #0b09;
+  height: 100%;
+}
+/* ✦ Информационное окно ✓ `Инфо-Подсказки` ✦ *//* #endregion */
