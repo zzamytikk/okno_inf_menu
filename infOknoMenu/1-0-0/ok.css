@@ -3,6 +3,19 @@
     © Copyright Плюшки для сайтов 2023
 */
 /* ✦ Информационное окно ✓ `Инфо-Подсказки` ✦ *//* #region */
+#Oinf, #Oinf *,
+[class*="Oinf"]::after,  /* [class] Понижаем приоретет */
+[class*="Oinf"]::before {/* Помогает интеграции на любой сайт */
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    line-height: 1.1;
+    font-size: inherit
+}
+
 #Oinf {z-index: 999;
   position: fixed;
   padding: 3px;
@@ -27,6 +40,7 @@
 }
 
     /* ✦✦ Сообщения ✦✦ *//* #region */
+        /* ✦✦✦ ! ✦✦✦ *//* #region */
 #Oinf > div {/* сообщения */
   filter: blur(20px);
   overflow: hidden;
@@ -39,25 +53,35 @@
   font-size: .8em;
   text-shadow: 0 1px 1px #000;
 }
+        /* ✦✦✦ ! ✦✦✦ *//* #endregion */
+
 #Oinf > div > div > i {/* Подсветка синим */
   color: #39f;
   font-style: normal;
 }
 
+        /* ✦✦✦ icon ✗, ✓,.. ✦✦✦ *//* #region */
+            /* ✦✦✦✦ ! ✦✦✦✦ *//* #region */
 [class*="Oinf"]::after,[class*="Oinf"]::before {/* для всех сообщений*/
   position: absolute;
   top:.15em;
-  left: 0;
-  width: .55em;
-  height: .55em;
+  left: .16em;
+  width: .65em;
+  height: .65em
 }
+            /* ✦✦✦✦ ! ✦✦✦✦ *//* #endregion */
+
+            /* ✦✦✦✦ .OinfL Загрузка ✦✦✦✦ *//* #region */
 .OinfL {/* Загрузка */
   color: #fffd
 }
 .OinfL::after,.OinfL::before {/* Для загрузки */
   content: '';
-  border: .1em solid;
+  border: .07em solid;
   border-radius: 50%;
+}
+.OinfL::before {
+  border-color: #fff2;
 }
 .OinfL::after {
   border-color: #0b0 #0b0 #0000 #0000;
@@ -66,9 +90,7 @@
 @keyframes A360 {
   100% {transform: rotate(360deg);}
 }
-.OinfL::before {
-  border-color: #fff2;
-}
+            /* ✦✦✦✦ .OinfL Загрузка ✦✦✦✦ *//* #endregion */
 
 [class*="Oinf"]:not(.OinfL)::after {
   top:.5em;
@@ -109,6 +131,7 @@
   top: .55em !important;
   font-size: .85em;
 }
+        /* ✦✦✦ icon ✗, ✓,.. ✦✦✦ *//* #endregion */
     /* ✦✦ Сообщения ✦✦ *//* #endregion */
 
 #Oinf > div > span {/* Полоса загрузки (До автозакрытия) */
@@ -117,6 +140,6 @@
   bottom: 0;
   margin: 1px 0;
   border-right: 1px solid #0b09;
-  height: 100%;
+  height: 99%;
 }
 /* ✦ Информационное окно ✓ `Инфо-Подсказки` ✦ *//* #endregion */

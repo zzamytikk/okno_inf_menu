@@ -178,10 +178,10 @@ var Oinf = {
     aX: b => {//Анимация закрытия смс и удоление.
       console.error('-1 сообщение. Всего смс:', $(Oinf.id + ' > div[data-oinf]').length);
 
-      b=(b.css('padding',0)//Убераем тря
-        .children('div')).animate({height:0},600, () => {
-        b.animate({width:0},600, () => {
-          b.parent().remove();
+      b=(b.css('padding',0)//Убераем тряску
+        .children('div')).animate({height:0},600, () => {//Спрячим
+          b.animate({width:0},600, () => {//Для плавного изменения размера окна
+            b.parent().remove();
         })
       });
     }
