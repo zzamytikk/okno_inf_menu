@@ -22,12 +22,32 @@
   <script !src="/gl/gl.js" defer></script>
 
   <!-- Измени путь на свой проект: -->
-  <link href="/infOknoMenu/1-0-0/ok.css" rel="stylesheet">
-  <script src="/infOknoMenu/1-0-0/ok.js" defer></script>
+  <link href="/infOknoMenu/1-0-0/m.css" rel="stylesheet">
+  <script src="/infOknoMenu/1-0-0/m.js" defer></script>
 </head>
 <body>
   <header><nav></nav></header>
   <main>
+    <style>
+      #Oinf.Oinf-Primer {z-index: 1;
+        position:relative;
+        margin:15px auto;
+      }
+      #Oinf.Oinf-Primer > div{
+        filter: blur(0);
+      }
+      #Oinf.Oinf-Primer > div > div {
+        display: block
+      }
+    </style>
+    <div id="Oinf" class="Oinf-Primer">
+      <h3>Уведомления</h3>
+      <div class="OinfL"><div>Загрузка раздела <i>Новости</i></div></div>
+      <div class="Oinf0"><div>Ошибка! не удалось сохранить ваше <i>сообщение</i></div></div>
+      <div class="Oinf1"><div>Хорошо <i>страница перезаписана</i></div></div>
+      <div class="Oinf2"><div>Вам пришло <i>сообщение</i></div></div>
+      <div class="Oinf3"><div>Такая запись уже сушествует <i>#7439</i></div></div>
+    </div>
     <fieldset>
       <legend>Панель управления</legend>
       <div style="display:flex; justify-content: center;">
@@ -78,7 +98,7 @@
         <span class="Oinf2"></span><button style="background: #ff1;" onclick="Oinf.$({id:'pr2',x:2,t:'Вам пришло <i>сообщение</i>'})">Сообшение</button>
         <button style="background: #ff1;" onclick="Oinf.$({id:'pr2',x:2,t:'Проверка сообщения <b>Сообшение</b>'})">...</button>
         <button onclick="Oinf.sms.X('pr2')" x>X</button><br>
-        <span class="Oinf3"></span><button style="background: orange;" onclick="Oinf.$({id:'pr3',x:3,t:'Такая запись уже сушествует <i>#7439</i>'})">Оповещение</button>
+        <span class="Oinf3"></span><button style="background: orange;" onclick="Oinf.$({id:'pr3',x:3,t:''})">Оповещение</button>
         <button style="background: orange;" onclick="Oinf.$({id:'pr3',x:3,t:'Проверка сообщения <b>Оповещение</b>'})">...</button>
         <button onclick="Oinf.sms.X('pr3')" x>X</button><br>
         <button style="background: #0087ff;" onclick="Oinf.$({id:'pri',t:'Для выделения текста добавим тег i&gt; <i>Пример выделенного текста</i> о как!'})">Тег &lt;i></button>

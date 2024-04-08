@@ -3,7 +3,7 @@
     © Copyright Плюшки для сайтов 2023
 */
 var Oinf = {
-  id: '#Oinf',//<div id="Oinf"></div>
+  id: 'body > #Oinf',//<div id="Oinf"></div> (body для возможности добавить пример)
   Z: 'Уведомления',//Заголовок
   y: '1.5rem',// Отступ Верх || Низ
   //y: 40,      //px {number}
@@ -68,7 +68,7 @@ var Oinf = {
           console.error('Создаём окно! css({ '+(q.s<3?'top':'bottom')+': '+O.y+', '+O.s+': -100% })');
   
           $('body').append(//Создаём html
-          $('<div id="'+O.id.replace('#','')+'">')
+          $('<div id="'+O.id.split('#')[1]+'">')
             .css({
               [q.s<3?'top':'bottom']: O.y,//px Отступ Верх/Низ
               [O.s]: '-100%'//Скрываем анимацию

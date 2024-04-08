@@ -41,7 +41,7 @@
 
     /* ✦✦ Сообщения ✦✦ *//* #region */
         /* ✦✦✦ ! ✦✦✦ *//* #region */
-#Oinf > div {/* сообщения */
+#Oinf > div {
   filter: blur(20px);
   overflow: hidden;
   position: relative;
