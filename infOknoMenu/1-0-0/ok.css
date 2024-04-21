@@ -12,7 +12,7 @@
     border: 0;
     outline: 0;
     box-sizing: border-box;
-    line-height: 1.1;
+    line-height: 1.2;
     font-size: inherit
 }
 
@@ -44,14 +44,19 @@
 #Oinf > div {
   filter: blur(20px);
   overflow: hidden;
-  position: relative;
-  padding: 1px 4px 0 1em;
+  padding: 0 4px 0 1em;
   transition: 1s;/* Вывод сообщений left, right */
+  /*border: 1px solid blue*/
 }
 
 #Oinf > div > div {display: none;
   font-size: .8em;
   text-shadow: 0 1px 1px #000;
+ /* border: 1px solid green*/
+}
+#Oinf > div > div::first-letter {/* Первая буква всегда заглавная! */
+  text-transform: uppercase;
+  font-size: 1.9ex /*  высота (для разных шрифтов) */
 }
         /* ✦✦✦ ! ✦✦✦ *//* #endregion */
 
@@ -62,45 +67,37 @@
 
         /* ✦✦✦ icon ✗, ✓,.. ✦✦✦ *//* #region */
             /* ✦✦✦✦ ! ✦✦✦✦ *//* #region */
-[class*="Oinf"]::after,[class*="Oinf"]::before {/* для всех сообщений*/
+#Oinf div > div > p:first-child {/* контенер */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  top:.15em;
-  left: .16em;
-  width: .65em;
-  height: .65em
+  top:0;
+  left:-1.2em;
+  width: 1.2em;
+  height: 1.1em;
+  /* border: 1px solid red*/
 }
-            /* ✦✦✦✦ ! ✦✦✦✦ *//* #endregion */
 
-            /* ✦✦✦✦ .OinfL Загрузка ✦✦✦✦ *//* #region */
-.OinfL {/* Загрузка */
-  color: #fffd
-}
-.OinfL::after,.OinfL::before {/* Для загрузки */
+#Oinf div > div > p:first-child::after,
+#Oinf div > div > p:first-child::before {/* для всех сообщений */
   content: '';
-  border: .07em solid;
-  border-radius: 50%;
+  position: absolute;
+  width: 0;
+  height: 0;
+  /*line-height: 0;*/
+ /*border: 1px solid lawngreen;*/
 }
-.OinfL::before {
-  border-color: #fff2;
+/* Понижаем приоритет через: [id="Oinf"] */
+[id="Oinf"] > div:not(.OinfL) > div > p:first-child::after {
+  top: -.05em;
+  left: .25em;
 }
-.OinfL::after {
-  border-color: #0b0 #0b0 #0000 #0000;
-  animation: A360 1s infinite linear;
-}
-@keyframes A360 {
-  100% {transform: rotate(360deg);}
-}
-            /* ✦✦✦✦ .OinfL Загрузка ✦✦✦✦ *//* #endregion */
 
-[class*="Oinf"]:not(.OinfL)::after {
-  top:.5em;
-  line-height: 0;
-}
 .Oinf0 {/* ✗ Ошибка */
-  color: #f00b;
   color: #f77;
 }
-.Oinf0::after {
+#Oinf .Oinf0 > div > p:first-child::after {
   content: '✗';
   color: red;
 }
@@ -108,33 +105,139 @@
 .Oinf1 {/* ✓ Хорошо */
   color: #8f8;
 }
-.Oinf1::after {
+#Oinf .Oinf1 > div > p:first-child::after {
   content: '✓';
+  top: 0em;
+  left: .15em;
   color:#3f3
 }
 
 .Oinf2 {/* ✉ Сообшение */
   color: #ff7;
 }
-.Oinf2::after {
+#Oinf .Oinf2>div>p:first-child::after {
   content: '✉';
+  top: -.14em;
+  left: .2em;
   color: #ff1;
-  top:.4em !important;
 }
 
 .Oinf3 {/* ⚠ Оповещение */
   color: #fc5;
 }
-.Oinf3::after {
+#Oinf .Oinf3>div>p:first-child::after {
+  content: '★';
+  left: .14em;
+  color: #fc0;
+}
+
+            /* ✦✦✦✦ .OinfL s Загрузка ✦✦✦✦ *//* #region */
+.OinfL {
+  color: #fffd
+}
+#Oinf .OinfL > div > p:first-child::after,
+#Oinf .OinfL > div > p:first-child::before {/* Для загрузки */
+  width: .7em;
+  height: .7em;
+  border: .06em solid;
+  border-radius: 50%;
+}
+#Oinf .OinfL > div > p:first-child::before {
+  border-color: #fff2;
+}
+#Oinf .OinfL > div > p:first-child::after {
+  border-color: #0b0 #0b0 #0000 #0000;
+  animation: A360 1s infinite linear;
+}
+@keyframes A360 {
+  100% {transform: rotate(360deg);}
+}
+            /* ✦✦✦✦ .OinfL s Загрузка ✦✦✦✦ *//* #endregion */
+
+
+
+
+
+
+
+
+#OinfZ div > div > s:first-child::after,
+#Oinfz div > div > s:first-child::before {/* для всех сообщений (s позвпляет подстроитса под разные шрифты) */
+  position: absolute;
+  top: .2em;
+  left: -1em;
+  width: .65em;
+  height: .65em;
+}
+            /* ✦✦✦✦ ! ✦✦✦✦ *//* #endregion */
+
+            /* ✦✦✦✦ .OinfL s Загрузка ✦✦✦✦ *//* #region */
+.OinfLz {
+  color: #fffd
+}
+.OinfLz > div > s:first-child::after,
+.OinfLz > div > s:first-child::before {/* Для загрузки */
+  content: '';
+  border: .06em solid;
+  border-radius: 50%;
+}
+.OinfLz > div > s:first-child::before {
+  border-color: #fff2;
+}
+.OinfLz > div > s:first-child::after {
+  border-color: #0b0 #0b0 #0000 #0000;
+  animation: A360 1s infinite linear;
+}
+@keyframes A360z {
+  100% {transform: rotate(360deg);}
+}
+            /* ✦✦✦✦ .OinfL s Загрузка ✦✦✦✦ *//* #endregion */
+
+#Oinfz div:not(.OinfL) > div > s:first-child::after {
+  top:.6em;
+  line-height: 0;
+  line-height: 2ex
+}
+
+.Oinf0z {/* ✗ Ошибка */
+  color: #f00b;
+  color: #f77;
+}
+.Oinf0z > div > s:first-child::after {
+  content: '✗';
+  top:.5em !important;
+  color: red;
+}
+
+.Oinf1z {/* ✓ Хорошо */
+  color: #8f8;
+}
+.Oinf1z > div > s:first-child::after {
+  content: '✓';
+  color:#3f3
+}
+
+.Oinf2z {/* ✉ Сообшение */
+  color: #ff7;
+}
+.Oinf2z > div > s:first-child::after {
+  content: '✉';
+  color: #ff1;
+  top:.4em !important;
+}
+
+.Oinf3z {/* ⚠ Оповещение */
+  color: #fc5;
+}
+.Oinf3z > div > s:first-child::after {
   content: '★';
   color: #fc0;
-  top: .55em !important;
-  font-size: .85em;
+  left: -1.2em;
+  font-size: .85em
 }
         /* ✦✦✦ icon ✗, ✓,.. ✦✦✦ *//* #endregion */
     /* ✦✦ Сообщения ✦✦ *//* #endregion */
-
-#Oinf > div > span {/* Полоса загрузки (До автозакрытия) */
+#Oinf > div > p:last-child {/* Полоса загрузки (До автозакрытия) */
   position: absolute;
   right: 0;
   bottom: 0;

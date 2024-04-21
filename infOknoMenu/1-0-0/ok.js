@@ -122,7 +122,7 @@ var Oinf = {
           class: 'Oinf'+(q.x>=0?q.x:'L'),
           'data-oinf': q.id
         }).css({[O.s]: X?0:'-100%', filter:'blur('+(X?0:20)+'px)'})//left || right, Показываем первое сообщение
-          .html('<div'+(X?' style="display:block"':'')+'>'+q.t+'</div>'+(q.x>=0?'<span></span>':''))
+          .html('<div'+(X?' style="display:block"':'')+'><p></p>'+q.t+'</div>'+(q.x>=0?'<p></p>':''))
           //display: block;//Для 1-го открытия окна
       );
       console.error('+1 сообщение! Всего смс:', $(O.id+' > div[data-oinf]').length);
@@ -210,7 +210,7 @@ var Oinf = {
         console.error('Oinf.A.$(); Автозакрытие сообщений! id для записи='+q.id+'. Установим задержку на', q.xS?'Своя: ': '',x+'сек.');
         
         setTimeout(() => {//Индикатор до закрытия
-          b.children('span').css({transition: (x+2)+'s',height:0,'border-color':'#f00'});
+          b.children('p').eq(-1).css({transition: (x+2)+'s',height:0,'border-color':'#f00'});
         }, 1);
         
         S.a[q.id]=setTimeout(()=>{//Удалим через
