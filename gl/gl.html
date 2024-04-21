@@ -48,7 +48,10 @@
       <div class="Oinf2"><div><p>&nbsp;</p>Вам пришло <i>сообщение</i></div></div>
       <div class="Oinf3"><div><p>&nbsp;</p>Такая запись уже сушествует <i>#7439</i></div></div>
     </div>
-    <fieldset>
+    
+    <p class="ram-V2 gI-inf all-c1">Информационное окно предназначено для вывода сообщений, предназначенных для оповещения пользователя о результатах выполнения каких-либо действий. (Уведомления: 'Ошибка/Хорошо', Сообщения)</p>
+    
+    <fieldset class="all-c4">
       <legend>Панель управления</legend>
       <div style="display:flex; justify-content: center;">
       <div style="padding-right: 5px">
@@ -115,7 +118,8 @@
         <button onclick="Oinf.sms.X('pri')" x>X</button><br>
       </div>
     </fieldset>
-    <p class="ram-V2 gI-inf all-c1">Информационное окно предназначено для вывода сообщений, предназначенных для оповещения пользователя о результатах выполнения каких-либо действий. (Уведомления: 'Ошибка/Хорошо', Сообщения)</p>
+
+    <h4 class="hr-n1 hr-L" style="---hr-Ct: var(--Ct)"><b>Добавим:</b></h4>
 
     <!-- HTML пример -->
     <pre class="ram-n0 all-c5" data-ram-zag="HTML" id="cod"><code class="v-BG0">
@@ -127,8 +131,10 @@
 
     ► Исходники: <a href="https://github.com/zzamytikk/okno_inf_menu/tree/main/infOknoMenu/1-0-0" target="_blank">css</a>
     
+    <h4 class="hr-n1 hr-L" style="---hr-Ct: var(--Ct)"><b>Примеры вывода смс:</b></h4>
+    
     <!-- js пример -->
-    <pre class="ram-n0 all-c5" data-ram-zag="Примеры javascript" id="cod"><code class="v-BG0">
+    <pre class="ram-n0 all-c5" data-ram-zag="javascript" id="cod"><code class="v-BG0">
     &lt;script>
     Oinf.$({//✗ Покажем сообщение `Ошибка`:
     &#8195;&#8195;id: 'err',
@@ -169,6 +175,8 @@
     Oinf.$('load');
     &lt;/script>
     </code></pre>
+    
+    <h4 class="hr-n1 hr-L" style="---hr-Ct: var(--Ct)"><b>Подробное описание команд:</b></h4>
     
     <!-- js -->
     <pre class="ram-n0 all-c5" data-ram-zag="javascript" id="cod"><code class="v-BG0">

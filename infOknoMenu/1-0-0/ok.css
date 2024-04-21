@@ -166,3 +166,29 @@
   height: 99%;
 }
 /* ✦ Информационное окно ✓ `Инфо-Подсказки` ✦ *//* #endregion */
+
+
+/* ✦ fieldset Рамка + Заголовок ✦ *//* #region */
+fieldset {
+  --fie-bor: var(--all-C);/* border, border-imege fie-n1 */
+  --fie-Ct: var(--all-C);/* title, border, border-imege fie-n0/fie-n1 */
+  --fie-b-sh: var(--all-b-sh); /* box-shadow fie-n0/fie-n1 */
+  margin: 9px 2px 0 2px;
+  padding: 4px 9px 12px 9px;
+  width: calc(100% - 24px);/* 4 margin + 18 padding + 2 border */
+  min-width: 0%; /* убераем выход рамки за пределы(когда внутри white-space: nowrap;) */
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--fie-Ct);
+  box-shadow: 0 3px 5px var(--fie-b-sh);
+}
+
+legend {
+  padding: 0 9px;
+  font-weight: 600;
+  color: var(--fie-Ct);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* ✦ fieldset Рамка + Заголовок ✦ *//* #endregion */
