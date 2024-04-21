@@ -156,6 +156,7 @@
             /* ✦✦✦✦ .OinfL s Загрузка ✦✦✦✦ *//* #endregion */
         /* ✦✦✦ icon ✗, ✓,.. ✦✦✦ *//* #endregion */
     /* ✦✦ Сообщения ✦✦ *//* #endregion */
+
 #Oinf > div > p:last-child {/* Полоса загрузки (До автозакрытия) */
   position: absolute;
   right: 0;
