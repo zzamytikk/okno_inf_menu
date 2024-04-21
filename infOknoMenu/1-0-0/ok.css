@@ -88,6 +88,7 @@
   /*line-height: 0;*/
  /*border: 1px solid lawngreen;*/
 }
+            /* ✦✦✦✦ ! ✦✦✦✦ *//* #endregion */
 /* Понижаем приоритет через: [id="Oinf"] */
 [id="Oinf"] > div:not(.OinfL) > div > p:first-child::after {
   top: -.05em;
@@ -153,88 +154,6 @@
   100% {transform: rotate(360deg);}
 }
             /* ✦✦✦✦ .OinfL s Загрузка ✦✦✦✦ *//* #endregion */
-
-
-
-
-
-
-
-
-#OinfZ div > div > s:first-child::after,
-#Oinfz div > div > s:first-child::before {/* для всех сообщений (s позвпляет подстроитса под разные шрифты) */
-  position: absolute;
-  top: .2em;
-  left: -1em;
-  width: .65em;
-  height: .65em;
-}
-            /* ✦✦✦✦ ! ✦✦✦✦ *//* #endregion */
-
-            /* ✦✦✦✦ .OinfL s Загрузка ✦✦✦✦ *//* #region */
-.OinfLz {
-  color: #fffd
-}
-.OinfLz > div > s:first-child::after,
-.OinfLz > div > s:first-child::before {/* Для загрузки */
-  content: '';
-  border: .06em solid;
-  border-radius: 50%;
-}
-.OinfLz > div > s:first-child::before {
-  border-color: #fff2;
-}
-.OinfLz > div > s:first-child::after {
-  border-color: #0b0 #0b0 #0000 #0000;
-  animation: A360 1s infinite linear;
-}
-@keyframes A360z {
-  100% {transform: rotate(360deg);}
-}
-            /* ✦✦✦✦ .OinfL s Загрузка ✦✦✦✦ *//* #endregion */
-
-#Oinfz div:not(.OinfL) > div > s:first-child::after {
-  top:.6em;
-  line-height: 0;
-  line-height: 2ex
-}
-
-.Oinf0z {/* ✗ Ошибка */
-  color: #f00b;
-  color: #f77;
-}
-.Oinf0z > div > s:first-child::after {
-  content: '✗';
-  top:.5em !important;
-  color: red;
-}
-
-.Oinf1z {/* ✓ Хорошо */
-  color: #8f8;
-}
-.Oinf1z > div > s:first-child::after {
-  content: '✓';
-  color:#3f3
-}
-
-.Oinf2z {/* ✉ Сообшение */
-  color: #ff7;
-}
-.Oinf2z > div > s:first-child::after {
-  content: '✉';
-  color: #ff1;
-  top:.4em !important;
-}
-
-.Oinf3z {/* ⚠ Оповещение */
-  color: #fc5;
-}
-.Oinf3z > div > s:first-child::after {
-  content: '★';
-  color: #fc0;
-  left: -1.2em;
-  font-size: .85em
-}
         /* ✦✦✦ icon ✗, ✓,.. ✦✦✦ *//* #endregion */
     /* ✦✦ Сообщения ✦✦ *//* #endregion */
 #Oinf > div > p:last-child {/* Полоса загрузки (До автозакрытия) */
