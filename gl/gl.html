@@ -53,33 +53,41 @@
     
     <fieldset class="all-c4">
       <legend>Панель управления</legend>
-      <div style="display:flex; justify-content: center;">
-      <div style="padding-right: 5px">
-        Верх с:<br>
-        Низ с:
+      <div id="tabD">
+        <div>
+          <div>С</div>
+          <div>Лева</div>
+          <div>Права</div>
+        </div>
+        <div>
+          <div>Верху</div>
+          <div>
+            <button onclick="Oinf.$({id:'vl',s: 1,t:'Верх лево #vl'})">#vl</button>
+            <button onclick="Oinf.sms.X('vl')" x>X</button>
+          </div>
+          <div>
+            <button onclick="Oinf.$({id:'vp',s:2,t:'Верх право #vp'})">#vp</button>
+            <button onclick="Oinf.sms.X('vp')" x>X</button>
+          </div>
+        </div>
+        <div>
+          <div>Низу</div>
+          <div>
+            <button onclick="Oinf.$({id:'nl',s:3,t:'Низ лево #nl'})">#nl</button>
+            <button onclick="Oinf.sms.X('nl')" x>X</button>
+          </div>
+          <div>
+            <button onclick="Oinf.$({id:'np',s:4,t:'Низ право #np'})">#np</button>
+            <button onclick="Oinf.sms.X('np')" x>X</button>
+          </div>
+        </div>
       </div>
-      <div style="text-align: right; padding-right: 5px">
-        <button onclick="Oinf.$({id:'vl',s: 1,t:'Верх лево #vl'})">Лева #vl</button>
-        <button onclick="Oinf.$({id:'vl',s: 1,t:'Верх лево2 #vl'})">Лева2 #vl</button>
-        <br>
-        <button onclick="Oinf.$({id:'nl',s:3,t:'Низ лево #nl'})">Лева #nl</button>
-      </div><div>
-         <button onclick="Oinf.sms.X('vl')" x>X</button>,
-        <br>
-        <button onclick="Oinf.sms.X('nl')" x>X</button>,
-      </div><div style="padding-left: 9px">
-        <button onclick="Oinf.$({id:'vp',s:2,t:'Верх право #vp'})">Права #vp</button>
-        <button onclick="Oinf.sms.X('vp')" x>X</button>
-        <br>
-        <button onclick="Oinf.$({id:'np',s:4,t:'Низ право #np'})">Права #np</button>
-        <button onclick="Oinf.sms.X('np')" x>X</button>
-      </div></div>
       <hr>
       <div style="text-align:center">
         <button style="background: #fff;" onclick="Oinf.X()" x>Закрыть всё</button>
       </div>
       <hr>
-      <div style="background: #999a; text-align: right;">
+      <div style="background: #999a; text-align: right; padding:3px">
         <style>
           #Oinf.Oinf-load {
             display: inline-block;
