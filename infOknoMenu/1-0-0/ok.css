@@ -136,18 +136,15 @@
 .OinfL {
   color: #fffd
 }
-#Oinf .OinfL > div > p:first-child::after,
-#Oinf .OinfL > div > p:first-child::before {/* Для загрузки */
-  width: .7em;
-  height: .7em;
-  border: .06em solid;
+#Oinf .OinfL > div > p:first-child::after {/* Для загрузки */
+  width: .8em;
+  height: .8em;
+  border: .07em solid;
   border-radius: 50%;
-}
-#Oinf .OinfL > div > p:first-child::before {
-  border-color: #fff2;
+  box-sizing: border-box;
 }
 #Oinf .OinfL > div > p:first-child::after {
-  border-color: #0b0 #0b0 #0000 #0000;
+  border-color: #0b0 #0b0 #fff2 #fff2;
   animation: A360 1s infinite linear;
 }
 @keyframes A360 {
