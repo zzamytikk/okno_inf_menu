@@ -5,9 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Информационное окно ✓ `Инфо-Подсказки`</title>
-  <style>
-    @import url("https://fonts.googleapis.com/css?family=Material+Icons|Comfortaa|Istok+Web:400,700&amp;subset=cyrillic");
-  </style>
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Comfortaa|Istok+Web:400,700&amp;subset=cyrillic" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
   
   <!-- ucoz -->
@@ -25,9 +23,13 @@
   <link href="/infOknoMenu/1-0-0/ok.css" rel="stylesheet">
   <script src="/infOknoMenu/1-0-0/ok.js" defer></script>
 </head>
-<body>
+<body><div id="M"><div></div></div>
   <header><nav></nav></header>
   <main>
+    <!-- ••• Презентация НАЧАЛО: ••• -->
+    <link href="/db/publ/infOknoMenu/1-0-0/m.css" rel="stylesheet">
+    <script src="/db/publ/infOknoMenu/1-0-0/m.js" defer></script>
+
     <style>
       #Oinf.Oinf-Primer {z-index: 1;
         position:relative;
@@ -89,6 +91,11 @@
       <hr>
       <div style="background: #999a; text-align: right; padding:3px">
         <style>
+          #i {
+            position: relative;
+            top:.2em;
+            font: 400 1.2em 'Material Icons';
+          }
           #Oinf.Oinf-load {
             display: inline-block;
             position:relative;
@@ -109,17 +116,17 @@
         <button onclick="Oinf.$({id:'prL',t:'Проверка сообщения <b>Загрузка</b>'})">...</button>
         <button onclick="Oinf.$({id:'prL',t:'Проверка сообщения <b>Загрузка</b> Длинный текст программы чики пики'})">....</button>
         <button onclick="Oinf.sms.X('prL')" x>X</button><br>
-        ✗ <button style="background: red;" onclick="Oinf.$({id:'pr0',x:0,t:'Ошибка! не удалось сохранить ваше <i>сообщение</i>'})">Ошибка</button>
+        <i id=i>cancel</i> <button style="background: red;" onclick="Oinf.$({id:'pr0',x:0,t:'Ошибка! не удалось сохранить ваше <i>сообщение</i>'})">Ошибка</button>
         <button style="background: red;" onclick="Oinf.$({id:'pr0',x:0,xS:5,t:'Ошибка! Закроем через <i>5сек</i>'})">Ошибка 5сек</button>
         <button style="background: red;" onclick="Oinf.$({id:'pr0',x:0,t:'Проверка сообщения <b>Ошибка</b>'})">...</button>
         <button onclick="Oinf.sms.X('pr0')" x>X</button><br>
-        ✓ <button style="background: #0b0;" onclick="Oinf.$({id:'pr1',x:1,t:'Хорошо <i>страница перезаписана</i>'})">Хорошо</button>
+        <i id=i>task_alt</i> <button style="background: #0b0;" onclick="Oinf.$({id:'pr1',x:1,t:'Хорошо <i>страница перезаписана</i>'})">Хорошо</button>
         <button style="background: #0b0;" onclick="Oinf.$({id:'pr1',x:1,t:'Проверка сообщения <b>Хорошо</b>'})">...</button>
         <button onclick="Oinf.sms.X('pr1')" x>X</button><br>
-        ✉ <button style="background: #ff1;" onclick="Oinf.$({id:'pr2',x:2,t:'Вам пришло <i>сообщение</i>'})">Сообшение</button>
+        <i id=i>mail_outline</i> <button style="background: #ff1;" onclick="Oinf.$({id:'pr2',x:2,t:'Вам пришло <i>сообщение</i>'})">Сообшение</button>
         <button style="background: #ff1;" onclick="Oinf.$({id:'pr2',x:2,t:'Проверка сообщения <b>Сообшение</b>'})">...</button>
         <button onclick="Oinf.sms.X('pr2')" x>X</button><br>
-        ★ <button style="background: orange;" onclick="Oinf.$({id:'pr3',x:3,t:'Такая запись уже сушествует <i>#7439</i>'})">Оповещение</button>
+        <i id=i>campaign</i> <button style="background: orange;" onclick="Oinf.$({id:'pr3',x:3,t:'Такая запись уже сушествует <i>#7439</i>'})">Оповещение</button>
         <button style="background: orange;" onclick="Oinf.$({id:'pr3',x:3,t:'Проверка сообщения <b>Оповещение</b>'})">...</button>
         <button onclick="Oinf.sms.X('pr3')" x>X</button><br>
         <button style="background: #0087ff;" onclick="Oinf.$({id:'pri',t:'Для выделения текста добавим тег i&gt; <i>Пример выделенного текста</i> о как!'})">Тег &lt;i></button>
@@ -218,6 +225,7 @@
     });
     &lt;/script>
     </code></pre>
+    <!-- ••• Презентация КОНЕЦ ••• -->
   </main>
   <footer></footer>
 
@@ -241,8 +249,6 @@
 </html>
 <!--
     &nbsp;	Неразрывный пробел
-    &#8194;	Узкий пробел (еn-шириной в букву n)
-    &#8195;	Широкий пробел (em-шириной в букву m)
 < 	&lt;	  Знак "меньше чем" (начало тега)
 >	  &gt;	  Знак "больше чем" (конец тега)
 "	  &quot;	Двойная кавычка

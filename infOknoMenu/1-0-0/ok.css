@@ -73,33 +73,29 @@
   align-items: center;
   position: absolute;
   top:0;
-  left:-1.2em;
+  left:-1.3em;
   width: 1.2em;
   height: 1.1em;
-  /* border: 1px solid red*/
+  /*border: 1px solid red*/
 }
 
 #Oinf div > div > p:first-child::after,
 #Oinf div > div > p:first-child::before {/* для всех сообщений */
   content: '';
   position: absolute;
-  width: 0;
-  height: 0;
-  /*line-height: 0;*/
- /*border: 1px solid lawngreen;*/
+  /*border: 1px solid lawngreen;*/
 }
             /* ✦✦✦✦ ! ✦✦✦✦ *//* #endregion */
 /* Понижаем приоритет через: [id="Oinf"] */
 [id="Oinf"] > div:not(.OinfL) > div > p:first-child::after {
-  top: -.05em;
-  left: .25em;
+  font: 400 .9em 'Material Icons';
 }
 
 .Oinf0 {/* ✗ Ошибка */
   color: #f77;
 }
 #Oinf .Oinf0 > div > p:first-child::after {
-  content: '✗';
+  content: '\e5c9';
   color: red;
 }
 
@@ -107,9 +103,7 @@
   color: #8f8;
 }
 #Oinf .Oinf1 > div > p:first-child::after {
-  content: '✓';
-  top: 0em;
-  left: .15em;
+  content: '\e2e6';
   color:#3f3
 }
 
@@ -117,9 +111,7 @@
   color: #ff7;
 }
 #Oinf .Oinf2>div>p:first-child::after {
-  content: '✉';
-  top: -.14em;
-  left: .2em;
+  content: '\e0e1';
   color: #ff1;
 }
 
@@ -127,8 +119,7 @@
   color: #fc5;
 }
 #Oinf .Oinf3>div>p:first-child::after {
-  content: '★';
-  left: .14em;
+  content: '\ef49';
   color: #fc0;
 }
 
