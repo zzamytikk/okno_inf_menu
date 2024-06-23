@@ -5,7 +5,7 @@
 /* ✦ Информационное окно ✓ `Инфо-Подсказки` ✦ *//* #region */
 #Oinf, #Oinf *,
 [class*="Oinf"]::after,  /* [class] Понижаем приоретет */
-[class*="Oinf"]::before {/* Помогает интеграции на любой сайт */
+[class*="Oinf"]::before {/* Помогает интеграции */
     position: relative;
     margin: 0;
     padding: 0;
