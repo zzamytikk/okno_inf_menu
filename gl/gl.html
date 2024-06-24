@@ -31,7 +31,11 @@
     <link href="/db/publ/infOknoMenu/1-0-0/m.css" rel="stylesheet">
     <script src="/db/publ/infOknoMenu/1-0-0/m.js" defer></script>
 
-    <style>
+    <div class="ram-V2 gI-inf all-c1">Информационное окно — предназначено для вывода сообщений, предназначенных для оповещения пользователя о результатах выполнения каких-либо действий. (Уведомления: 'Ошибка/Хорошо', Сообщения)</div>
+    
+    <fieldset class="all-c1">
+      <legend>Пример</legend>
+      <style>
       #Oinf.Oinf-Primer {z-index: 1;
         position:relative;
         margin:15px auto;
@@ -43,100 +47,96 @@
         display: block
       }
     </style>
-    <div id="Oinf" class="Oinf-Primer">
-      <h3>Уведомления</h3>
-      <div class="OinfL"><div><p>&nbsp;</p>загрузка раздела <i>Новости</i></div></div>
-      <div class="Oinf0"><div><p>&nbsp;</p>Ошибка! не удалось сохранить ваше <i>сообщение</i></div></div>
-      <div class="Oinf1"><div><p>&nbsp;</p>Хорошо <i>страница перезаписана</i></div></div>
-      <div class="Oinf2"><div><p>&nbsp;</p>Вам пришло <i>сообщение</i></div></div>
-      <div class="Oinf3"><div><p>&nbsp;</p>Такая запись уже сушествует <i>#7439</i></div></div>
-    </div>
+      <div id="Oinf" class="Oinf-Primer">
+        <h3>Уведомления</h3>
+        <div class="OinfL"><div><p>&nbsp;</p>загрузка раздела <i>Новости</i></div></div>
+        <div class="Oinf0"><div><p>&nbsp;</p>Ошибка! не удалось сохранить ваше <i>сообщение</i></div></div>
+        <div class="Oinf1"><div><p>&nbsp;</p>Хорошо <i>страница перезаписана</i></div></div>
+        <div class="Oinf2"><div><p>&nbsp;</p>Вам пришло <i>сообщение</i></div></div>
+        <div class="Oinf3"><div><p>&nbsp;</p>Такая запись уже сушествует <i>#7439</i></div></div>
+      </div>
     
-    <div class="ram-V2 gI-inf all-c1">Информационное окно — предназначено для вывода сообщений, предназначенных для оповещения пользователя о результатах выполнения каких-либо действий. (Уведомления: 'Ошибка/Хорошо', Сообщения)</div>
-    
-    <fieldset class="all-c4">
-      <legend>Панель управления</legend>
-      <div id="tabD">
-        <div>
-          <div>С</div>
-          <div>Лева</div>
-          <div>Права</div>
-        </div>
-        <div>
-          <div>Верху</div>
+      <h4 class="hr-n1 hr-L" style="--hr-Ct: var(--Ct)"><b>Панель управления:</b></h4> 
+        <div id="tabD">
           <div>
-            <button onclick="Oinf.$({id:'vl',s: 1,t:'Верх лево #vl'})">#vl</button>
-            <button onclick="Oinf.sms.X('vl')" x>X</button>
+            <div>С</div>
+            <div>Лева</div>
+            <div>Права</div>
           </div>
           <div>
-            <button onclick="Oinf.$({id:'vp',s:2,t:'Верх право #vp'})">#vp</button>
-            <button onclick="Oinf.sms.X('vp')" x>X</button>
+            <div>Верху</div>
+            <div>
+              <button onclick="Oinf.$({id:'vl',s: 1,t:'Верх лево #vl'})">#vl</button>
+              <button onclick="Oinf.sms.X('vl')" x>X</button>
+            </div>
+            <div>
+              <button onclick="Oinf.$({id:'vp',s:2,t:'Верх право #vp'})">#vp</button>
+              <button onclick="Oinf.sms.X('vp')" x>X</button>
+            </div>
           </div>
-        </div>
-        <div>
-          <div>Низу</div>
           <div>
-            <button onclick="Oinf.$({id:'nl',s:3,t:'Низ лево #nl'})">#nl</button>
-            <button onclick="Oinf.sms.X('nl')" x>X</button>
-          </div>
-          <div>
-            <button onclick="Oinf.$({id:'np',s:4,t:'Низ право #np'})">#np</button>
-            <button onclick="Oinf.sms.X('np')" x>X</button>
+            <div>Низу</div>
+            <div>
+              <button onclick="Oinf.$({id:'nl',s:3,t:'Низ лево #nl'})">#nl</button>
+              <button onclick="Oinf.sms.X('nl')" x>X</button>
+            </div>
+            <div>
+              <button onclick="Oinf.$({id:'np',s:4,t:'Низ право #np'})">#np</button>
+              <button onclick="Oinf.sms.X('np')" x>X</button>
+            </div>
           </div>
         </div>
-      </div>
-      <hr>
-      <div style="text-align:center">
-        <button style="background: #fff;" onclick="Oinf.X()" x>Закрыть всё</button>
-      </div>
-      <hr>
-      <div style="background: #999a; text-align: right; padding:3px">
-        <style>
-          #i {
-            position: relative;
-            top:.2em;
-            font: 400 1.2em 'Material Icons';
-          }
-          #Oinf.Oinf-load {
-            display: inline-block;
-            position:relative;
-            top:.08em;
-            padding: 0;
-            background: #0000;
-            min-width: 1em;
-            border:0;
-            outline:0;
-            box-shadow: none;
-          }
-        </style>
-        <div id="Oinf" class="Oinf-load">
-          <div class="OinfL" style="filter:blur(0);">
-            <div style="display:block;height:1em"><p>&nbsp;</p></div>
-          </div>
-        </div><button onclick="Oinf.$({id:'prL',t:'Загрузка раздела <i>Новости</i>'})">Загрузка</button>
-        <button onclick="Oinf.$({id:'prL',t:'Проверка сообщения <b>Загрузка</b>'})">...</button>
-        <button onclick="Oinf.$({id:'prL',t:'Проверка сообщения <b>Загрузка</b> Длинный текст программы чики пики'})">....</button>
-        <button onclick="Oinf.sms.X('prL')" x>X</button><br>
-        <i id=i>cancel</i> <button style="background: red;" onclick="Oinf.$({id:'pr0',x:0,t:'Ошибка! не удалось сохранить ваше <i>сообщение</i>'})">Ошибка</button>
-        <button style="background: red;" onclick="Oinf.$({id:'pr0',x:0,xS:5,t:'Ошибка! Закроем через <i>5сек</i>'})">Ошибка 5сек</button>
-        <button style="background: red;" onclick="Oinf.$({id:'pr0',x:0,t:'Проверка сообщения <b>Ошибка</b>'})">...</button>
-        <button onclick="Oinf.sms.X('pr0')" x>X</button><br>
-        <i id=i>task_alt</i> <button style="background: #0b0;" onclick="Oinf.$({id:'pr1',x:1,t:'Хорошо <i>страница перезаписана</i>'})">Хорошо</button>
-        <button style="background: #0b0;" onclick="Oinf.$({id:'pr1',x:1,t:'Проверка сообщения <b>Хорошо</b>'})">...</button>
-        <button onclick="Oinf.sms.X('pr1')" x>X</button><br>
-        <i id=i>mail_outline</i> <button style="background: #ff1;" onclick="Oinf.$({id:'pr2',x:2,t:'Вам пришло <i>сообщение</i>'})">Сообшение</button>
-        <button style="background: #ff1;" onclick="Oinf.$({id:'pr2',x:2,t:'Проверка сообщения <b>Сообшение</b>'})">...</button>
-        <button onclick="Oinf.sms.X('pr2')" x>X</button><br>
-        <i id=i>campaign</i> <button style="background: orange;" onclick="Oinf.$({id:'pr3',x:3,t:'Такая запись уже сушествует <i>#7439</i>'})">Оповещение</button>
-        <button style="background: orange;" onclick="Oinf.$({id:'pr3',x:3,t:'Проверка сообщения <b>Оповещение</b>'})">...</button>
-        <button onclick="Oinf.sms.X('pr3')" x>X</button><br>
-        <button style="background: #0087ff;" onclick="Oinf.$({id:'pri',t:'Для выделения текста добавим тег i&gt; <i>Пример выделенного текста</i> о как!'})">Тег &lt;i></button>
-        <button onclick="Oinf.sms.X('pri')" x>X</button><br>
-      </div>
+        <hr>
+        <div style="text-align:center">
+          <button style="background: #fff;" onclick="Oinf.X()" x>Закрыть всё</button>
+        </div>
+        <hr>
+        <div style="background: #999a; text-align: right; padding:3px">
+          <style>
+            #i {
+              position: relative;
+              top:.2em;
+              font: 400 1.2em 'Material Icons';
+            }
+            #Oinf.Oinf-load {
+              display: inline-block;
+              position:relative;
+              top:.08em;
+              padding: 0;
+              background: #0000;
+              min-width: 1em;
+              border:0;
+              outline:0;
+              box-shadow: none;
+            }
+          </style>
+          <div id="Oinf" class="Oinf-load">
+            <div class="OinfL" style="filter:blur(0);">
+              <div style="display:block;height:1em"><p>&nbsp;</p></div>
+            </div>
+          </div><button onclick="Oinf.$({id:'prL',t:'Загрузка раздела <i>Новости</i>'})">Загрузка</button>
+          <button onclick="Oinf.$({id:'prL',t:'Проверка сообщения <b>Загрузка</b>'})">...</button>
+          <button onclick="Oinf.$({id:'prL',t:'Проверка сообщения <b>Загрузка</b> Длинный текст программы чики пики'})">....</button>
+          <button onclick="Oinf.sms.X('prL')" x>X</button><br>
+          <i id=i>cancel</i> <button style="background: red;" onclick="Oinf.$({id:'pr0',x:0,t:'Ошибка! не удалось сохранить ваше <i>сообщение</i>'})">Ошибка</button>
+          <button style="background: red;" onclick="Oinf.$({id:'pr0',x:0,xS:5,t:'Ошибка! Закроем через <i>5сек</i>'})">Ошибка 5сек</button>
+          <button style="background: red;" onclick="Oinf.$({id:'pr0',x:0,t:'Проверка сообщения <b>Ошибка</b>'})">...</button>
+          <button onclick="Oinf.sms.X('pr0')" x>X</button><br>
+          <i id=i>task_alt</i> <button style="background: #0b0;" onclick="Oinf.$({id:'pr1',x:1,t:'Хорошо <i>страница перезаписана</i>'})">Хорошо</button>
+          <button style="background: #0b0;" onclick="Oinf.$({id:'pr1',x:1,t:'Проверка сообщения <b>Хорошо</b>'})">...</button>
+          <button onclick="Oinf.sms.X('pr1')" x>X</button><br>
+          <i id=i>mail_outline</i> <button style="background: #ff1;" onclick="Oinf.$({id:'pr2',x:2,t:'Вам пришло <i>сообщение</i>'})">Сообшение</button>
+          <button style="background: #ff1;" onclick="Oinf.$({id:'pr2',x:2,t:'Проверка сообщения <b>Сообшение</b>'})">...</button>
+          <button onclick="Oinf.sms.X('pr2')" x>X</button><br>
+          <i id=i>campaign</i> <button style="background: orange;" onclick="Oinf.$({id:'pr3',x:3,t:'Такая запись уже сушествует <i>#7439</i>'})">Оповещение</button>
+          <button style="background: orange;" onclick="Oinf.$({id:'pr3',x:3,t:'Проверка сообщения <b>Оповещение</b>'})">...</button>
+          <button onclick="Oinf.sms.X('pr3')" x>X</button><br>
+          <button style="background: #0087ff;" onclick="Oinf.$({id:'pri',t:'Для выделения текста добавим тег i&gt; <i>Пример выделенного текста</i> о как!'})">Тег &lt;i></button>
+          <button onclick="Oinf.sms.X('pri')" x>X</button><br>
+        </div>
     </fieldset>
 
-    <h4 class="hr-n1 hr-L" style="--hr-Ct: var(--Ct)"><b>Добавим:</b></h4>
-
+    <h4 class="hr-n1 hr-L" style="--hr-Ct: var(--Ct)"><b>Подключение к сайту:</b></h4>
     <!-- HTML пример -->
     <pre class="ram-n0 all-c5" data-ram-zag="HTML" id="cod"><code class="v-BG0">
     &lt;!-- Добавить в &lt;head>..&lt;/head>: -->
@@ -147,45 +147,44 @@
 
     <b style="color:red">►</b> Исходники(css, js): <a href="https://github.com/zzamytikk/okno_inf_menu/tree/main/infOknoMenu/1-0-0" target="_blank">github</a> <i style="opacity:.4">(m. - Сокращённый вариант, ok. - Подробный)</i>
     
-    <h4 class="hr-n1 hr-L" style="--hr-Ct: var(--Ct)"><b>Примеры вывода смс:</b></h4>
-    
+    <h4 class="hr-n1 hr-L" style="--hr-Ct: var(--Ct)"><b>Примеры вывода смс:</b></h4> 
     <!-- js пример -->
     <pre class="ram-n0 all-c5" data-ram-zag="javascript" id="cod"><code class="v-BG0">
     &lt;script>
     Oinf.$({//✗ Покажем сообщение `Ошибка`:
-    &#8195;&#8195;id: 'err',
-    &#8195;&#8195;x: 0,
-    &#8195;&#8195;t: 'Ошибка! не удалось сохранить ваше <i>сообщение</i>'
+    &nbsp; &nbsp; id: 'err',
+    &nbsp; &nbsp; x: 0,
+    &nbsp; &nbsp; t: 'Ошибка! не удалось сохранить ваше <i>сообщение</i>'
     });
     
     Oinf.$({//✗ Покажем сообщение `Ошибка` с изменением таймера до автозакрытия:
-    &#8195;&#8195;id: 'err',
-    &#8195;&#8195;x: 0,
-    &#8195;&#8195;xS: 30,//Изменим таймер автозакрытия на 30сек (По умолчанию 15сек)
-    &#8195;&#8195;t: 'Ошибка! не удалось сохранить ваше <i>сообщение</i>'
+    &nbsp; &nbsp; id: 'err',
+    &nbsp; &nbsp; x: 0,
+    &nbsp; &nbsp; xS: 30,//Изменим таймер автозакрытия на 30сек (По умолчанию 15сек)
+    &nbsp; &nbsp; t: 'Ошибка! не удалось сохранить ваше <i>сообщение</i>'
     });
     
     Oinf.$({//✓ Покажем сообщение `Хорошо`:
-    &#8195;&#8195;id: 'ok',
-    &#8195;&#8195;x: 1,
-    &#8195;&#8195;t: 'Материал был добавлен.'
+    &nbsp; &nbsp; id: 'ok',
+    &nbsp; &nbsp; x: 1,
+    &nbsp; &nbsp; t: 'Материал был добавлен.'
     });
     
     Oinf.$({//✉ Покажем `Сообщение`:
-    &#8195;&#8195;id: 'sms',
-    &#8195;&#8195;x: 2,
-    &#8195;&#8195;t: 'Вам пришло сообщение!'
+    &nbsp; &nbsp; id: 'sms',
+    &nbsp; &nbsp; x: 2,
+    &nbsp; &nbsp; t: 'Вам пришло сообщение!'
     });
     
     Oinf.$({//★ Покажем сообщение `Оповещение`:
-    &#8195;&#8195;id: 'opp',
-    &#8195;&#8195;x: 3,
-    &#8195;&#8195;t: 'Материал уже был добавлен.'
+    &nbsp; &nbsp; id: 'opp',
+    &nbsp; &nbsp; x: 3,
+    &nbsp; &nbsp; t: 'Материал уже был добавлен.'
     });
     
     Oinf.$({//Покажем сообщение `Загрузка`:
-    &#8195;&#8195;id: 'load',
-    &#8195;&#8195;t: 'Загрузка раздела <b>Новости</b>'
+    &nbsp; &nbsp; id: 'load',
+    &nbsp; &nbsp; t: 'Загрузка раздела <b>Новости</b>'
     });
     <!-- Закроем сообщение `Загрузка`: -->
     Oinf.$('load');
@@ -199,30 +198,30 @@
     <!-- Подробный пример вывода сообщений: -->
     &lt;script>
     Oinf.$({//★ Информационное окно ✓ `Инфо-Подсказки`
-    &#8195;&#8195;id: {string}, //* id сообщения
-    &#8195;&#8195;&#8195;&#8195;id: 'novost', //• id Для удаления сообщений || Замена на новое
+    &nbsp; &nbsp; id: {string}, //* id сообщения
+    &nbsp; &nbsp; &nbsp; &nbsp; id: 'novost', //• id Для удаления сообщений || Замена на новое
   
-    &#8195;&#8195;x: {number/array}, //* Автозакрытие/Формат смс
-    &#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;//Формат:&#8195;&#8195;&#8195;&#8195;&#8195;Через:&#8195;&#8195;&#8195;Цвет:
-    &#8195;&#8195;&#8195;&#8195;x: 0, //Ошибка&#8195;&#8195;&#8195;&#8195;&#8195;•15сек&#8195;&#8195;&#8195;•Красный&#8195;&#8195;&#8195;✗
-    &#8195;&#8195;&#8195;&#8195;x: 1, //Хорошо&#8195;&#8195;&#8195;&#8195;&#8195;•10сек&#8195;&#8195;&#8195;•Зелёный&#8195;&#8195;&#8195;✓
-    &#8195;&#8195;&#8195;&#8195;x: 2, //Сообшение&#8195;&#8195;•15сек&#8195;&#8195;&#8195;•Жёлтый&#8195;&#8195;&#8195;&#8195;✉
-    &#8195;&#8195;&#8195;&#8195;x: 3, //Оповещение •15сек&#8195;&#8195;&#8195;•Оранжевый ★
-    &#8195;&#8195;&#8195;&#8195;x: undefined,//Загрузка (Закрываем сами через Oinf.$('novost');)
+    &nbsp; &nbsp; x: {number/array}, //* Автозакрытие/Формат смс
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //Формат: &nbsp; &nbsp; &nbsp; Через: &nbsp; &nbsp; Цвет:
+    &nbsp; &nbsp; &nbsp; &nbsp; x: 0, //Ошибка &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;•15сек &nbsp; &nbsp; •Красный &nbsp; &nbsp; &nbsp; ✗
+    &nbsp; &nbsp; &nbsp; &nbsp; x: 1, //Хорошо &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;•10сек &nbsp; &nbsp; •Зелёный &nbsp; &nbsp; &nbsp; ✓
+    &nbsp; &nbsp; &nbsp; &nbsp; x: 2, //Сообшение &nbsp; •15сек &nbsp; &nbsp; •Жёлтый &nbsp; &nbsp; &nbsp; &nbsp; ✉
+    &nbsp; &nbsp; &nbsp; &nbsp; x: 3, //Оповещение •15сек &nbsp; &nbsp; •Оранжевый ★
+    &nbsp; &nbsp; &nbsp; &nbsp; x: undefined,//Загрузка (Закрываем сами через Oinf.$('novost');)
         
-    &#8195;&#8195;xS: {number}, //Изменим время автозакрытия смс
-    &#8195;&#8195;&#8195;&#8195;xS: 30, //30сек
+    &nbsp; &nbsp; xS: {number}, //Изменим время автозакрытия смс
+    &nbsp; &nbsp; &nbsp; &nbsp; xS: 30, //30сек
   
-    &#8195;&#8195;s: {number}, //* Сторона поивления
-    &#8195;&#8195;s: 1, //• Верх слева
-    &#8195;&#8195;s: 2, //• Верх справа
-    &#8195;&#8195;s: 3, //• Низ слева
-    &#8195;&#8195;s: 4, //• Низ справа
-    &#8195;&#8195;s: undefined, //• S:2; по умолчанию (Верх справа)
+    &nbsp; &nbsp; s: {number}, //* Сторона поивления
+    &nbsp; &nbsp; s: 1, //• Верх слева
+    &nbsp; &nbsp; s: 2, //• Верх справа
+    &nbsp; &nbsp; s: 3, //• Низ слева
+    &nbsp; &nbsp; s: 4, //• Низ справа
+    &nbsp; &nbsp; s: undefined, //• S:2; по умолчанию (Верх справа)
   
-    &#8195;&#8195;t: {string/html}, //* Содержание сообщения
-    &#8195;&#8195;t: '&lt;b>Загрузка&lt;/b> раздела &lt;i>Новости&lt;/i>',
-    &#8195;&#8195;&#8195;&#8195;&#8195;&#8195;//° &lt;i> = Выделит текст синим
+    &nbsp; &nbsp; t: {string/html}, //* Содержание сообщения
+    &nbsp; &nbsp; t: '&lt;b>Загрузка&lt;/b> раздела &lt;i>Новости&lt;/i>',
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //° &lt;i> = Выделит текст синим
     });
     &lt;/script>
     </code></pre>
