@@ -13,7 +13,6 @@
     outline: 0;
     box-sizing: border-box;
     line-height: 1.2;
-    font-size: inherit
 }
 
 #Oinf {z-index: 999;
@@ -21,7 +20,7 @@
   padding: 3px;
   min-width: 140px;
   max-width: 250px;
-  font-size: 1em;/* html 12pt */
+  font-size: 1rem;/* html */
   background: #000000ed;
   border: 1px solid #fff5;
   border-radius: 2px;
