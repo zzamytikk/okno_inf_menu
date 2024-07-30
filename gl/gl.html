@@ -158,43 +158,43 @@
     <h4 class="hr-n1 hr-L" style="--hr-Ct: var(--Ct)"><b>Примеры вывода смс:</b></h4>
     <pre class="ram-n0 all-c5" data-ram-zag="javascript" id="cod"><code class="v-BG0">
     &lt;script>
-    Oinf.$({//✗ Покажем сообщение `Ошибка`:
+    &nbsp; Oinf.$({//✗ Покажем сообщение `Ошибка`:
     &nbsp; &nbsp; id: 'err',
     &nbsp; &nbsp; x: 0,
     &nbsp; &nbsp; t: 'Ошибка! не удалось сохранить ваше <i>сообщение</i>'
-    });
+    &nbsp; });
     
-    Oinf.$({//✗ Покажем сообщение `Ошибка` с изменением таймера до автозакрытия:
+    &nbsp; Oinf.$({//✗ Покажем сообщение `Ошибка` с изменением таймера до автозакрытия:
     &nbsp; &nbsp; id: 'err',
     &nbsp; &nbsp; x: 0,
     &nbsp; &nbsp; xS: 30,//Изменим таймер автозакрытия на 30сек (По умолчанию 15сек)
     &nbsp; &nbsp; t: 'Ошибка! не удалось сохранить ваше <i>сообщение</i>'
-    });
+    &nbsp; });
     
-    Oinf.$({//✓ Покажем сообщение `Хорошо`:
+    &nbsp; Oinf.$({//✓ Покажем сообщение `Хорошо`:
     &nbsp; &nbsp; id: 'ok',
     &nbsp; &nbsp; x: 1,
     &nbsp; &nbsp; t: 'Материал был добавлен.'
-    });
+    &nbsp; });
     
-    Oinf.$({//✉ Покажем `Сообщение`:
+    &nbsp; Oinf.$({//✉ Покажем `Сообщение`:
     &nbsp; &nbsp; id: 'sms',
     &nbsp; &nbsp; x: 2,
     &nbsp; &nbsp; t: 'Вам пришло сообщение!'
-    });
+    &nbsp; });
     
-    Oinf.$({//★ Покажем сообщение `Оповещение`:
+    &nbsp; Oinf.$({//★ Покажем сообщение `Оповещение`:
     &nbsp; &nbsp; id: 'opp',
     &nbsp; &nbsp; x: 3,
     &nbsp; &nbsp; t: 'Материал уже был добавлен.'
-    });
+    &nbsp; });
     
-    Oinf.$({//Покажем сообщение `Загрузка`:
+    &nbsp; Oinf.$({//Покажем сообщение `Загрузка`:
     &nbsp; &nbsp; id: 'load',
     &nbsp; &nbsp; t: 'Загрузка раздела <b>Новости</b>'
-    });
-    <!-- Закроем сообщение `Загрузка`: -->
-    Oinf.$('load');
+    &nbsp; });
+    &nbsp; <!-- Закроем сообщение `Загрузка`: -->
+    &nbsp; Oinf.$('load');
     &lt;/script>
     </code></pre>
     
@@ -202,32 +202,32 @@
     <pre class="ram-n0 all-c5" data-ram-zag="javascript" id="cod"><code class="v-BG0">
     <!-- Подробный пример вывода сообщений: -->
     &lt;script>
-    Oinf.$({//★ Информационное окно ✓ `Инфо-Подсказки`
-    &nbsp; &nbsp; id: {string}, //* id сообщения
-    &nbsp; &nbsp; &nbsp; &nbsp; id: 'novost', //• id Для удаления сообщений || Замена на новое
+    &nbsp; Oinf.$({//★ Информационное окно ✓ `Инфо-Подсказки`
+    &nbsp; &nbsp; id: {string}, &nbsp; //* id сообщения
+    &nbsp; &nbsp; &nbsp; id: 'novost', //• id Для удаления сообщений || Замена на новое
   
     &nbsp; &nbsp; x: {number/array}, //* Автозакрытие/Формат смс
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //Формат: &nbsp; &nbsp; &nbsp; Через: &nbsp; &nbsp; Цвет:
-    &nbsp; &nbsp; &nbsp; &nbsp; x: 0, //Ошибка &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;•15сек &nbsp; &nbsp; •Красный &nbsp; &nbsp; &nbsp; ✗
-    &nbsp; &nbsp; &nbsp; &nbsp; x: 1, //Хорошо &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;•10сек &nbsp; &nbsp; •Зелёный &nbsp; &nbsp; &nbsp; ✓
-    &nbsp; &nbsp; &nbsp; &nbsp; x: 2, //Сообшение &nbsp; •15сек &nbsp; &nbsp; •Жёлтый &nbsp; &nbsp; &nbsp; &nbsp; ✉
-    &nbsp; &nbsp; &nbsp; &nbsp; x: 3, //Оповещение •15сек &nbsp; &nbsp; •Оранжевый ★
-    &nbsp; &nbsp; &nbsp; &nbsp; x: undefined,//Загрузка (Закрываем сами через Oinf.$('novost');)
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //Формат: &nbsp; &nbsp; Через: &nbsp; &nbsp; Цвет:
+    &nbsp; &nbsp; &nbsp; x: 0, //Ошибка &nbsp; &nbsp; •15сек &nbsp; &nbsp; •Красный &nbsp; ✗
+    &nbsp; &nbsp; &nbsp; x: 1, //Хорошо &nbsp; &nbsp; •10сек &nbsp; &nbsp; •Зелёный &nbsp; ✓
+    &nbsp; &nbsp; &nbsp; x: 2, //Сообшение &nbsp;•15сек &nbsp; &nbsp; •Жёлтый &nbsp; &nbsp;✉
+    &nbsp; &nbsp; &nbsp; x: 3, //Оповещение •15сек &nbsp; &nbsp; •Оранжевый ★
+    &nbsp; &nbsp; &nbsp; x: undefined,//Загрузка (Закрываем сами через Oinf.$('novost');)
         
-    &nbsp; &nbsp; xS: {number}, //Изменим время автозакрытия смс
-    &nbsp; &nbsp; &nbsp; &nbsp; xS: 30, //30сек
+    &nbsp; &nbsp; xS: {number}, //*Изменим время автозакрытия смс
+    &nbsp; &nbsp; &nbsp; xS: 30, &nbsp; &nbsp; //30сек
   
     &nbsp; &nbsp; s: {number}, //* Сторона поивления
-    &nbsp; &nbsp; s: 1, //• Верх слева
-    &nbsp; &nbsp; s: 2, //• Верх справа
-    &nbsp; &nbsp; s: 3, //• Низ слева
-    &nbsp; &nbsp; s: 4, //• Низ справа
-    &nbsp; &nbsp; s: undefined, //• S:2; по умолчанию (Верх справа)
+    &nbsp; &nbsp; &nbsp; s: 1, //• Верх слева
+    &nbsp; &nbsp; &nbsp; s: 2, //• Верх справа
+    &nbsp; &nbsp; &nbsp; s: 3, //• Низ слева
+    &nbsp; &nbsp; &nbsp; s: 4, //• Низ справа
+    &nbsp; &nbsp; &nbsp; s: undefined, //• S:2; по умолчанию (Верх справа)
   
     &nbsp; &nbsp; t: {string/html}, //* Содержание сообщения
-    &nbsp; &nbsp; t: '&lt;b>Загрузка&lt;/b> раздела &lt;i>Новости&lt;/i>',
+    &nbsp; &nbsp; &nbsp; t: '&lt;b>Загрузка&lt;/b> раздела &lt;i>Новости&lt;/i>',
     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //° &lt;i> = Выделит текст синим
-    });
+    &nbsp; });
     &lt;/script>
     </code></pre>
     <!-- ••• Презентация КОНЕЦ ••• -->
