@@ -257,7 +257,7 @@ var Oinf = {
    *  @param  { string } s  - Сторона поивления окна left/right
    */
   Xs: {
-    $: (O, id, s) => {//Вешаем .on()
+    $: (O, id, s) => { //Вешаем .on()
       let q; //q <= Для сохранения записей mousemove/touchmove (в .on())
       console.debug('--- Вешаем.on(); Закроем окно проведя пальцем');
       
@@ -268,9 +268,9 @@ var Oinf = {
           (function(m) {
             q = {
               n: m, //Кординаты курсора начальная точка mousedown || touchstart
-              S: m  //Кординаты когда меняем mousemove || touchmove
+              S: m //Кординаты когда меняем mousemove || touchmove
             }
-          }(O.Xs.m(O, e)));//Координаты мышки относительно окна
+          }(O.Xs.m(O, e))); //Координаты мышки относительно окна
           
           /*console.debug('Кординаты курсора:',
             '\n\tНачало q.n:', q.n,
@@ -280,12 +280,12 @@ var Oinf = {
           return;
         }
         
-        if(q?.n) {//Была запись в mousedown
+        if (q?.n) { //Была запись в mousedown
           if (e.type == 'mousemove' || e.type == 'touchmove') { //scroll
             if (q.n) { //Убераем холостое срабатывание когда нажали и отпустили, без лево право. mousemove || touchmove
               //console.debug('Перезапись координатов мышки q.S['+q.S+'] на:', m,);
               //Перезапись:
-              q.S = O.Xs.m(O, e);//Координаты мышки относительно окна
+              q.S = O.Xs.m(O, e); //Координаты мышки относительно окна
             }
           } else { //mouseup || touchend
             //console.debug('q.n['+q.n+'] != ['+q.S+']q.S =', q.n != q.S? 'true':'false Остановим!!!');
@@ -320,11 +320,10 @@ var Oinf = {
      *  @param  { event } e  - .on()
      * - - - -
      *  @return { number }   - Координаты мышки относительно окна
-     */ 
+     */
     m: (O, e) => O.f.Dr( //Обрезаем дроби без округления!
-    //mousemove || touchmove
-        e.pageX || (e.originalEvent.touches[0] || e.originalEvent.changedTouches[0]).pageX
-      , 3) //.123 До 3 дробин (Для точности установления направления: перемещения контейнера!!)
+      //mousemove || touchmove
+      e.pageX || (e.originalEvent.touches[0] || e.originalEvent.changedTouches[0]).pageX, 3) //.123 До 3 дробин (Для точности установления направления: перемещения контейнера!!)
   },
   f: { //Функции
     //★ Обрезаем дроби без округления!:
