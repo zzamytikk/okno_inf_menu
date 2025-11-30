@@ -49,9 +49,10 @@
   /*border: 1px solid blue*/
 }
 
-#Oinf > div > div {display: none;
+#Oinf > div > div {display: none;/* Список сообщений */
   font-size: .8em;
   text-shadow: 0 1px 1px #000;
+  word-break: break-all;/* указывает перенос пол слова. */
  /* border: 1px solid green*/
 }
 #Oinf > div > div::first-letter {/* Первая буква всегда заглавная! */
