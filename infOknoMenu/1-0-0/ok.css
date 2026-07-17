@@ -2,6 +2,7 @@
     ✫ Версия 1.0.0
     © Copyright Плюшки для сайтов 2023
 */
+
 /* ✦ Информационное окно ✓ `Инфо-Подсказки` ✦ *//* #region */
 #Oinf, #Oinf *,
 [class*="Oinf"]::after,  /* [class] Понижаем приоретет */
@@ -153,5 +154,15 @@
   margin: 1px 0;
   border-right: 1px solid #0b09;
   height: 99%;
+}
+
+.OinfXs {/* Закроем окно проведя пальцем: */
+  animation: OinfXs 1s;
+}
+@keyframes OinfXs {
+  100% {
+    border: 1px solid red;
+    box-shadow: inset 0 0 3px red;
+  }
 }
 /* ✦ Информационное окно ✓ `Инфо-Подсказки` ✦ *//* #endregion */

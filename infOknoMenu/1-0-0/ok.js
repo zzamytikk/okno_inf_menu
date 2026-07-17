@@ -249,7 +249,7 @@ var Oinf = {
       }, 999); //После закрытия анимации
     }, 999); //Даёт возможность показать быстро закрытое смс и не ломает анимацию закрытия когда окно ещё открывается
   },
-  //★ Закроем окно проведя пальцем
+//Закроем окно проведя пальцем
   /** Oinf.Xs.$(O, id, s);//Вешаем .on(). Закроем окно проведя пальцем по нему в сторону стенки
    * 
    *  @param  { array }  O  - Начало пути Oinf (Для сокращения)
@@ -259,10 +259,10 @@ var Oinf = {
   Xs: {
     $: (O, id, s) => { //Вешаем .on()
       let q; //q <= Для сохранения записей mousemove/touchmove (в .on())
-      console.debug('--- Вешаем.on(); Закроем окно проведя пальцем');
+      //console.debug('--- Вешаем.on(); Закроем окно проведя пальцем');
       
       $(id).on('mouseup mousedown mousemove touchstart touchmove touchend', function(e) {
-        console.debug('.ON()', e.type, e.type == 'mousedown' || e.type == 'touchstart' ? '----------------------:' : ':');
+        //console.debug('.ON()', e.type, e.type == 'mousedown' || e.type == 'touchstart' ? '----------------------:' : ':');
         
         if (e.type == 'mousedown' || e.type == 'touchstart') { //Кординаты курсора для начальной точки mousemove/toucmove
           (function(m) {
@@ -304,7 +304,10 @@ var Oinf = {
               );*/
               if ((s[0] == 'r' && (q.n + p) < q.S) || (s[0] == 'l' && (q.n - p) > q.S)) { //Закроем окно
                 //console.debug('Закроем окно');
-                $(id).css('border-color', 'red');
+                
+                $(id).removeClass('OinfXs');//border + shadow
+                setTimeout(() => {$(id).addClass('OinfXs');}, 1);
+                
                 O.X(); //Закрываем окно с удалением его
               }
             }
